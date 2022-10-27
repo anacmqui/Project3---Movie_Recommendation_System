@@ -1,0 +1,221 @@
+rotten_tomatoes_link,Movie Title,Rotten Tomatoes rating,Studio,original_release_date,Year
+m/toy_story,Toy Story,100.0,Buena Vista,1995-11-22,1995
+m/mary_poppins,Mary Poppins,100.0,Disney,1964-08-26,1964
+m/paddington_2,Paddington 2,100.0,Warner Bros.,2018-01-12,2018
+m/toy_story_2,Toy Story 2,100.0,Buena Vista,1999-11-24,1999
+m/finding_nemo,Finding Nemo,99.0,Disney,2003-05-30,2003
+m/how_to_train_your_dragon,How to Train Your Dragon,99.0,Paramount,2010-03-26,2010
+m/dumbo,Dumbo,98.0,Disney,1941-10-23,1941
+m/inside_out_2015,Inside Out,98.0,Disney,2015-06-19,2015
+m/1048445-snow_white_and_the_seven_dwarfs,Snow White and the Seven Dwarfs,98.0,Disney,1937-12-21,1937
+m/101_dalmatians,101 Dalmatians,98.0,Buena Vista,1961-01-25,1961
+m/the_wizard_of_oz_1939,The Wizard of Oz,98.0,Warner Bros.,1939-08-25,1939
+m/up,Up,98.0,Disney,2009-05-29,2009
+m/et_the_extraterrestrial,E.T. The Extra-Terrestrial,98.0,Universal,1982-06-11,1982
+m/toy_story_3,Toy Story 3,98.0,Disney,2010-06-18,2010
+m/spider_man_into_the_spider_verse,Spider-Man: Into the Spider-Verse,97.0,Sony,2018-12-14,2018
+m/toy_story_4,Toy Story 4,97.0,Disney,2019-06-21,2019
+m/big,Big,97.0,20th Century Fox,1988-01-01,1988
+m/spirited_away,Spirited Away,97.0,Disney,2002-09-20,2002
+m/princess_bride,The Princess Bride,97.0,20th Century Fox,1987-09-25,1987
+m/coco_2017,Coco,97.0,Disney,2017-11-22,2017
+m/incredibles,The Incredibles,97.0,Buena Vista,2004-11-05,2004
+m/who_framed_roger_rabbit,Who Framed Roger Rabbit,97.0,Buena Vista,1988-06-22,1988
+m/1065598-babe,Babe,97.0,Universal,1995-08-04,1995
+m/chicken_run,Chicken Run,97.0,Dreamworks,2000-06-21,2000
+m/ratatouille,Ratatouille,96.0,Disney,2007-06-29,2007
+m/the_lego_movie,The LEGO Movie,96.0,Warner Bros.,2014-02-07,2014
+m/miracle_on_34th_street,Miracle on 34th Street,96.0,20th Century Fox,1947-01-01,1947
+m/iron_giant,The Iron Giant,96.0,Warner Bros.,1999-07-01,1999
+m/monsters_inc,"Monsters, Inc.",96.0,Disney,2001-11-02,2001
+m/harry_potter_and_the_deathly_hallows_part_2_2011,Harry Potter and the Deathly Hallows - Part 2,96.0,Warner Bros.,2011-07-15,2011
+m/straight_story,The Straight Story,95.0,Buena Vista,1999-10-15,1999
+m/the_breadwinner,The Breadwinner,95.0,nan,2017-11-17,2017
+m/the_muppets,The Muppets,95.0,Disney,2011-11-23,2011
+m/wallace_and_gromit_curse_of_the_wererabbit,Wallace & Gromit: The Curse of the Were-Rabbit,95.0,Dreamworks,2005-10-07,2005
+m/disneys_aladdin,Aladdin,95.0,Disney,1992-11-11,1992
+m/moana_2016,Moana,95.0,Disney,2016-11-23,2016
+m/beauty_and_the_beast_1991,Beauty and the Beast,94.0,Buena Vista,1991-11-22,1991
+m/the_jungle_book_2016,The Jungle Book,94.0,Disney,2016-04-15,2016
+m/incredibles_2,Incredibles 2,93.0,Disney,2018-06-15,2018
+m/enchanted,Enchanted,93.0,Disney,2007-11-21,2007
+m/the_lion_king,The Lion King,93.0,Buena Vista,1994-06-15,1994
+m/that_thing_you_do,That Thing You Do!,93.0,20th Century Fox,1996-10-04,1996
+m/lady_and_the_tramp,Lady and the Tramp,93.0,Buena Vista,1955-06-22,1955
+m/hugo,Hugo,93.0,Paramount,2011-11-23,2011
+m/1197696-fantastic_mr_fox,Fantastic Mr. Fox,93.0,20th Century Fox,2009-11-25,2009
+m/the_little_mermaid_1989,The Little Mermaid,93.0,Disney,1989-01-01,1989
+m/duma,Duma,93.0,Warner Bros.,2005-09-30,2005
+m/the_witches,The Witches,93.0,Warner Bros.,1990-02-16,1990
+m/antz,Antz,92.0,Dreamworks,1998-10-02,1998
+m/bugs_life,A Bug's Life,92.0,Buena Vista,1998-11-20,1998
+m/arthur_christmas,Arthur Christmas,92.0,Sony,2011-11-23,2011
+m/1041870-matinee,Matinee,92.0,Universal,1992-06-01,1992
+m/ponyo,Ponyo,92.0,Disney,2009-08-14,2009
+m/winnie_the_pooh_2011,Winnie the Pooh,91.0,Disney,2011-07-15,2011
+m/how_to_train_your_dragon_2,How to Train Your Dragon 2,91.0,20th Century Fox,2014-06-13,2014
+m/james_and_the_giant_peach,James and the Giant Peach,91.0,Buena Vista,1996-04-12,1996
+m/teen_titans_go_to_the_movies,Teen Titans Go! To the Movies,91.0,Warner Bros.,2018-07-27,2018
+m/willy_wonka_and_the_chocolate_factory,Willy Wonka and the Chocolate Factory,90.0,Paramount,1971-06-30,1971
+m/disneynature_bears,Disneynature Bears,90.0,Disney,2014-04-18,2014
+m/harry_potter_and_the_prisoner_of_azkaban,Harry Potter and the Prisoner of Azkaban,90.0,Warner Bros.,2004-06-04,2004
+m/how_to_train_your_dragon_the_hidden_world,How to Train Your Dragon: The Hidden World,90.0,Universal,2019-02-22,2019
+m/frozen_2013,Frozen,90.0,Disney,2013-11-27,2013
+m/the_lego_batman_movie,The Lego Batman Movie,90.0,Warner Bros.,2017-02-10,2017
+m/how_green_was_my_valley,How Green Was My Valley,89.0,20th Century Fox,1941-01-01,1941
+m/the_kid_who_would_be_king,The Kid Who Would Be King,89.0,20th Century Fox,2019-01-25,2019
+m/1019187-sleeping_beauty,Sleeping Beauty,89.0,Buena Vista,1959-01-29,1959
+m/karate_kid,The Karate Kid,89.0,Columbia Pictures,1984-06-22,1984
+m/1010939-jason_and_the_argonauts,Jason and the Argonauts,89.0,Columbia Pictures,1963-06-19,1963
+m/tangled,Tangled,89.0,Disney,2010-11-24,2010
+m/shrek_2,Shrek 2,89.0,Dreamworks,2004-05-19,2004
+m/1004151-christmas_story,A Christmas Story,89.0,MGM,1983-11-18,1983
+m/big_hero_6,Big Hero 6,89.0,Disney,2014-11-07,2014
+m/ralph_breaks_the_internet,Ralph Breaks the Internet,88.0,Disney,2018-11-21,2018
+m/millions,Millions,88.0,20th Century Fox,2005-03-11,2005
+m/1045518-secret_garden,The Secret Garden,88.0,Warner Bros.,1993-03-18,1993
+m/petes_dragon_2016,Pete's Dragon,88.0,Disney,2016-08-12,2016
+m/rango,Rango,88.0,Paramount,2011-03-04,2011
+m/onward,Onward,88.0,Disney,2020-03-06,2020
+m/freaky_friday,Freaky Friday,88.0,Buena Vista,2003-08-06,2003
+m/shrek,Shrek,88.0,Dreamworks,2001-05-18,2001
+m/harry_potter_and_the_goblet_of_fire,Harry Potter and the Goblet of Fire,88.0,Warner Bros.,2005-11-18,2005
+m/1031385-jungle_book,The Jungle Book,88.0,Buena Vista,1967-10-18,1967
+m/howls_moving_castle,Howl's Moving Castle,87.0,Buena Vista,2005-06-17,2005
+m/kung_fu_panda,Kung Fu Panda,87.0,Paramount,2008-06-06,2008
+m/the_peanuts_movie,The Peanuts Movie,87.0,20th Century Fox,2015-11-06,2015
+m/peewees_big_adventure,Pee-wee's Big Adventure,87.0,Warner Bros.,1985-07-26,1985
+m/wreck_it_ralph,Wreck-it Ralph,87.0,Disney,2012-11-02,2012
+m/field_of_dreams,Field of Dreams,87.0,Universal,1989-04-21,1989
+m/1079818-anastasia,Anastasia,86.0,20th Century Fox,1997-11-14,1997
+m/1083414-parent_trap,The Parent Trap,86.0,Disney,1998-07-29,1998
+m/1196077-cloudy_with_a_chance_of_meatballs,Cloudy With a Chance of Meatballs,86.0,Sony,2009-09-18,2009
+m/mulan,Mulan,86.0,Buena Vista,1998-06-19,1998
+m/1209933-puss_in_boots,Puss in Boots,86.0,Paramount,2011-10-28,2011
+m/1196003-princess_and_the_frog,The Princess and the Frog,85.0,Disney,2009-12-11,2009
+m/dora_and_the_lost_city_of_gold,Dora and the Lost City of Gold,85.0,Paramount,2019-08-09,2019
+m/emperors_new_groove,The Emperor's New Groove,85.0,Buena Vista,2000-12-15,2000
+m/bridge_to_terabithia,Bridge to Terabithia,85.0,Buena Vista,2007-02-16,2007
+m/corpse_bride,Tim Burton's Corpse Bride,84.0,Warner Bros.,2005-09-16,2005
+m/cinderella_2013,Cinderella,84.0,Disney,2015-03-13,2015
+m/mad_hot_ballroom,Mad Hot Ballroom,84.0,Paramount,2005-05-20,2005
+m/hercules,Hercules,84.0,Buena Vista,1997-06-15,1997
+m/harry_potter_and_the_half_blood_prince,Harry Potter and the Half-Blood Prince,84.0,Warner Bros.,2009-07-15,2009
+m/charlie_and_the_chocolate_factory,Charlie and the Chocolate Factory,83.0,Warner Bros.,2005-07-15,2005
+m/sound_of_music,The Sound of Music,83.0,20th Century Fox,1965-03-02,1965
+m/fiddler_on_the_roof,Fiddler on the Roof,83.0,United Artists,1971-11-03,1971
+m/harry_potter_and_the_chamber_of_secrets,Harry Potter and the Chamber of Secrets,82.0,Warner Bros.,2002-11-15,2002
+m/mr_peabody_and_sherman,Mr. Peabody & Sherman,81.0,20th Century Fox,2014-03-07,2014
+m/island_of_lemurs_madagascar,Island Of Lemurs: Madagascar,81.0,Warner Bros.,2014-04-04,2014
+m/fantasia_2000,Fantasia 2000,81.0,Buena Vista,2000-06-16,2000
+m/harry_potter_and_the_sorcerers_stone,Harry Potter and the Sorcerer's Stone,81.0,Warner Bros.,2001-11-16,2001
+m/1214097-despicable_me,Despicable Me,81.0,Universal,2010-07-09,2010
+m/1016213-peter_pan,Peter Pan,81.0,Disney,1953-02-05,1953
+m/dolphin_tale,Dolphin Tale,81.0,Warner Bros.,2011-09-23,2011
+m/kung_fu_panda_the_kaboom_of_doom,Kung Fu Panda 2,81.0,Paramount,2011-05-26,2011
+m/stuart_little_2,Stuart Little 2,81.0,Columbia Pictures,2002-07-19,2002
+m/mcfarland_usa,McFarland USA,81.0,Disney,2015-02-20,2015
+m/the_spongebob_movie_sponge_out_of_water,The SpongeBob Movie: Sponge Out of Water,81.0,Paramount,2015-02-06,2015
+m/the_neverending_story_1984,The Neverending Story,80.0,Warner Bros.,1984-07-20,1984
+m/wild_thornberrys_movie,The Wild Thornberrys Movie,80.0,Paramount,2002-12-20,2002
+m/muppets_most_wanted,Muppets Most Wanted,80.0,Disney,2014-03-21,2014
+m/monsters_university,Monsters University,80.0,Disney,2013-06-21,2013
+m/poohs_heffalump_movie,Pooh's Heffalump Movie,80.0,Buena Vista,2005-02-11,2005
+m/prince_of_egypt,The Prince of Egypt,80.0,Dreamworks,1998-12-18,1998
+m/1057637-jungle_book,Rudyard Kipling's The Jungle Book,80.0,Buena Vista,1994-12-23,1994
+m/dark_crystal,The Dark Crystal,79.0,Sony,1982-12-17,1982
+m/horton-hears-a-who2008,Dr. Seuss' Horton Hears a Who!,79.0,20th Century Fox,2008-03-03,2008
+m/surfs_up,Surf's Up,79.0,Sony,2007-06-08,2007
+m/madagascar_3_europes_most_wanted_2012,Madagascar 3: Europe's Most Wanted,78.0,Paramount,2012-06-08,2012
+m/charlottes_web,Charlotte's Web,78.0,Paramount,2006-12-15,2006
+m/goosebumps_2015,Goosebumps,78.0,Sony,2015-10-16,2015
+m/brave_2012,Brave,78.0,Disney,2012-06-22,2012
+m/holes,Holes,78.0,Buena Vista,2003-04-18,2003
+m/two_brothers,Two Brothers,78.0,Universal,2004-06-25,2004
+m/harry_potter_and_the_order_of_the_phoenix,Harry Potter and the Order of the Phoenix,78.0,Warner Bros.,2007-07-11,2007
+m/rudy,Rudy,78.0,Sony,1993-10-13,1993
+m/ice_age,Ice Age,77.0,20th Century Fox,2002-03-15,2002
+m/adventures_of_elmo_in_grouchland,The Adventures of Elmo in Grouchland,77.0,Columbia Pictures,1999-10-01,1999
+m/frozen_ii,Frozen II,77.0,Disney,2019-11-21,2019
+m/1023543-white_christmas,White Christmas,77.0,Paramount,1954-01-01,1954
+m/harry_potter_and_the_deathly_hallows_part_1,Harry Potter and the Deathly Hallows - Part 1,77.0,Warner Bros.,2010-11-19,2010
+m/1128577-peter_pan,Peter Pan,77.0,Universal,2003-12-25,2003
+m/the_good_dinosaur,The Good Dinosaur,76.0,Disney,2015-11-25,2015
+m/spies_in_disguise,Spies in Disguise,76.0,20th Century Fox,2019-12-25,2019
+m/happy_feet,Happy Feet,76.0,Warner Bros.,2006-11-17,2006
+m/trolls,Trolls,76.0,Dreamworks,2016-11-04,2016
+m/jumanji_welcome_to_the_jungle,Jumanji: Welcome to the Jungle,76.0,Columbia Pictures,2017-12-20,2017
+m/chronicles_of_narnia_lion_witch_wardrobe,"The Chronicles of Narnia: The Lion, The Witch and The Wardrobe",76.0,Buena Vista,2005-12-09,2005
+m/muppet_christmas_carol,The Muppet Christmas Carol,76.0,Buena Vista,1992-12-11,1992
+m/zathura,Zathura: A Space Adventure,76.0,Sony,2005-11-11,2005
+m/nanny_mcphee_returns,Nanny McPhee Returns,76.0,Universal,2010-08-20,2010
+m/rugrats_in_paris,Rugrats in Paris - The Movie,76.0,Paramount,2000-11-17,2000
+m/teachers_pet_2004,Teacher's Pet,76.0,Buena Vista,2004-01-16,2004
+m/over_the_hedge,Over the Hedge,75.0,Dreamworks,2006-05-19,2006
+m/despicable_me_2,Despicable Me 2,75.0,Universal,2013-07-03,2013
+m/monster_house,Monster House,75.0,Sony,2006-07-21,2006
+m/cars,Cars,75.0,Buena Vista,2006-06-09,2006
+m/smallfoot,Smallfoot,75.0,Warner Bros.,2018-09-28,2018
+m/rise_of_the_guardians_2012,Rise of the Guardians,75.0,Paramount,2012-11-21,2012
+m/fantastic_beasts_and_where_to_find_them,Fantastic Beasts and Where to Find Them,74.0,Warner Bros.,2016-11-18,2016
+m/the_bfg_2016,The BFG,74.0,Disney,2016-07-01,2016
+m/jimmy_neutron_boy_genius,Jimmy Neutron - Boy Genius,74.0,Paramount,2001,2001
+m/the_adventures_of_tintin,The Adventures of Tintin,74.0,Paramount,2011-12-21,2011
+m/water_horse,The Water Horse: Legend of the Deep,74.0,Sony,2007-12-25,2007
+m/my_dog_skip,My Dog Skip,73.0,Warner Bros.,2000-03-03,2000
+m/1142872-sky_high,Sky High,73.0,Buena Vista,2005-07-29,2005
+m/monsters_vs_aliens,Monsters vs. Aliens,73.0,Paramount,2009-03-27,2009
+m/nanny_mcphee,Nanny McPhee,73.0,Universal,2006-01-27,2006
+m/christopher_robin,Christopher Robin,73.0,Disney,2018-08-03,2018
+m/where_the_wild_things_are,Where the Wild Things Are,73.0,Warner Bros.,2009-10-16,2009
+m/flushed_away,Flushed Away,73.0,Paramount,2006-11-03,2006
+m/lemony_snicket,Lemony Snicket's A Series of Unfortunate Events,72.0,Paramount,2004-12-17,2004
+m/megamind,Megamind,72.0,Paramount,2010-11-05,2010
+m/labyrinth,Labyrinth,72.0,Sony,1986-06-27,1986
+m/rio,Rio,72.0,20th Century Fox,2011-04-15,2011
+m/hannah-montanamiley-cyrus-best-of-both-worlds-concert-tour,Hannah Montana/Miley Cyrus: Best of Both Worlds Concert Tour,71.0,Disney,2008-02-01,2008
+m/1073037-hunchback_of_notre_dame,The Hunchback of Notre Dame,71.0,Disney,1996-06-21,1996
+m/the-croods,The Croods,71.0,20th Century Fox,2013-03-22,2013
+m/into_the_woods_2014,Into the Woods,71.0,Disney,2014-12-24,2014
+m/mrs_doubtfire,Mrs. Doubtfire,71.0,20th Century Fox,1993-11-24,1993
+m/cars_3,Cars 3,70.0,Disney,2017-06-16,2017
+m/spirit_stallion_of_the_cimarron,Spirit - Stallion of the Cimarron,70.0,Dreamworks,2002-05-24,2002
+m/ramona_and_beezus,Ramona and Beezus,70.0,20th Century Fox,2010-07-23,2010
+m/cloudy_with_a_chance_of_meatballs_2_2013,Cloudy with a Chance of Meatballs 2,70.0,Sony,2013-09-27,2013
+m/piglets_big_movie,Piglet's Big Movie,70.0,Disney,2003-03-21,2003
+m/1153951-curious_george,Curious George,70.0,Universal,2006-02-10,2006
+m/1001193-around_the_world_in_80_days,Around the World in 80 Days,69.0,United Artists,1956-10-17,1956
+m/treasure_planet,Treasure Planet,69.0,Buena Vista,2002-11-27,2002
+m/pokemon_detective_pikachu,Pokémon Detective Pikachu,68.0,Warner Bros.,2019-05-10,2019
+m/spongebob_squarepants_movie,The SpongeBob SquarePants Movie,68.0,Paramount,2004-11-19,2004
+m/chronicles_of_narnia_prince_caspian,The Chronicles of Narnia: Prince Caspian,67.0,Disney,2008-05-16,2008
+m/meet_the_robinsons,Meet the Robinsons,67.0,Buena Vista,2007-03-30,2007
+m/stuart_little,Stuart Little,67.0,Columbia Pictures,1999-12-17,1999
+m/dolphin_tale_2,Dolphin Tale 2,66.0,Warner Bros.,2014-09-12,2014
+m/the_house_with_a_clock_in_its_walls,The House with a Clock in Its Walls,66.0,Universal,2018-09-21,2018
+m/turbo_2013,Turbo,66.0,Dreamworks,2013-07-17,2013
+m/karate_kid_2010,The Karate Kid,66.0,Sony,2010-06-11,2010
+m/storks,Storks,66.0,Warner Bros.,2016-09-23,2016
+m/rocketeer,The Rocketeer,65.0,Disney,1991-06-21,1991
+m/epic_2013,Epic,65.0,20th Century Fox,2013-05-24,2013
+m/babe_pig_in_the_city,Babe: Pig in the City,65.0,Universal,1998-11-25,1998
+m/home_alone,Home Alone,65.0,20th Century Fox,1990-11-16,1990
+m/dreamer,Dreamer: Inspired by a True Story,64.0,Dreamworks,2005-10-21,2005
+m/the_frighteners,The Frighteners,64.0,Universal,1996-07-19,1996
+m/madagascar_escape_2_africa,Madagascar: Escape 2 Africa,64.0,Paramount,2008-11-07,2008
+m/miss_peregrines_home_for_peculiar_children,Miss Peregrine's Home for Peculiar Children,64.0,20th Century Fox,2016-09-30,2016
+m/robots,Robots,64.0,20th Century Fox,2005-03-11,2005
+m/1097046-dinosaur,Dinosaur,64.0,Buena Vista,2000-05-19,2000
+m/peter_rabbit_2018,Peter Rabbit,63.0,Columbia Pictures,2018-02-09,2018
+m/sandlot,The Sandlot,63.0,20th Century Fox,1993-04-01,1993
+m/muppets_from_space,Muppets From Space,63.0,Columbia Pictures,1999-07-14,1999
+m/ant_bully,The Ant Bully,62.0,Warner Bros.,2006-07-28,2006
+m/paulie,Paulie,62.0,Dreamworks,1998-04-17,1998
+m/hotel_transylvania_3_summer_vacation,Hotel Transylvania 3: Summer Vacation,62.0,Sony,2018-07-13,2018
+m/the-tigger-movie,The Tigger Movie,62.0,Buena Vista,2000-02-11,2000
+m/journey_to_the_center_of_the_earth_2008,Journey to the Center of the Earth,61.0,Warner Bros.,2008-07-11,2008
+m/10005499-oliver_twist,Oliver Twist,61.0,Sony,2005-09-30,2005
+m/alexander_and_the_terrible_horrible_no_good_very_bad_day,"Alexander and the Terrible, Horrible, No Good, Very Bad Day",61.0,Disney,2014-10-10,2014
+m/the_grinch,The Grinch,60.0,Universal,2018-11-09,2018
+m/tuck_everlasting,Tuck Everlasting,60.0,Buena Vista,2002-10-22,2002
+m/recess_schools_out,Recess: School's Out,60.0,Buena Vista,2001-02-16,2001
