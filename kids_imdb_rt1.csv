@@ -1,0 +1,221 @@
+rotten_tomatoes_link,Movie Title,Year,Studio,IMDb rating,Rotten Tomatoes rating
+m/toy_story,Toy Story,1995,Buena Vista,8.3,100.0
+m/mary_poppins,Mary Poppins,1964,Disney,7.8,100.0
+m/paddington_2,Paddington 2,2018,Warner Bros.,,100.0
+m/toy_story_2,Toy Story 2,1999,Buena Vista,7.9,100.0
+m/finding_nemo,Finding Nemo,2003,Disney,8.2,99.0
+m/how_to_train_your_dragon,How to Train Your Dragon,2010,Paramount,8.1,99.0
+m/dumbo,Dumbo,1941,Disney,7.2,98.0
+m/inside_out_2015,Inside Out,2015,Disney,8.2,98.0
+m/1048445-snow_white_and_the_seven_dwarfs,Snow White and the Seven Dwarfs,1937,Disney,7.6,98.0
+m/101_dalmatians,101 Dalmatians,1961,Buena Vista,,98.0
+m/the_wizard_of_oz_1939,The Wizard of Oz,1939,Warner Bros.,8.1,98.0
+m/up,Up,2009,Disney,8.3,98.0
+m/et_the_extraterrestrial,E.T. The Extra-Terrestrial,1982,Universal,,98.0
+m/toy_story_3,Toy Story 3,2010,Disney,8.3,98.0
+m/spider_man_into_the_spider_verse,Spider-Man: Into the Spider-Verse,2018,Sony,8.4,97.0
+m/toy_story_4,Toy Story 4,2019,Disney,7.7,97.0
+m/big,Big,1988,20th Century Fox,7.3,97.0
+m/spirited_away,Spirited Away,2002,Disney,8.6,97.0
+m/princess_bride,The Princess Bride,1987,20th Century Fox,8.0,97.0
+m/coco_2017,Coco,2017,Disney,8.4,97.0
+m/incredibles,The Incredibles,2004,Buena Vista,8.0,97.0
+m/who_framed_roger_rabbit,Who Framed Roger Rabbit,1988,Buena Vista,7.7,97.0
+m/1065598-babe,Babe,1995,Universal,6.9,97.0
+m/chicken_run,Chicken Run,2000,Dreamworks,7.1,97.0
+m/ratatouille,Ratatouille,2007,Disney,8.1,96.0
+m/the_lego_movie,The LEGO Movie,2014,Warner Bros.,,96.0
+m/miracle_on_34th_street,Miracle on 34th Street,1947,20th Century Fox,7.9,96.0
+m/iron_giant,The Iron Giant,1999,Warner Bros.,8.1,96.0
+m/monsters_inc,"Monsters, Inc.",2001,Disney,8.1,96.0
+m/harry_potter_and_the_deathly_hallows_part_2_2011,Harry Potter and the Deathly Hallows - Part 2,2011,Warner Bros.,8.1,96.0
+m/straight_story,The Straight Story,1999,Buena Vista,8.0,95.0
+m/the_breadwinner,The Breadwinner,2017,,7.7,95.0
+m/the_muppets,The Muppets,2011,Disney,7.1,95.0
+m/wallace_and_gromit_curse_of_the_wererabbit,Wallace & Gromit: The Curse of the Were-Rabbit,2005,Dreamworks,,95.0
+m/disneys_aladdin,Aladdin,1992,Disney,8.0,95.0
+m/moana_2016,Moana,2016,Disney,7.6,95.0
+m/beauty_and_the_beast_1991,Beauty and the Beast,1991,Buena Vista,,94.0
+m/the_jungle_book_2016,The Jungle Book,2016,Disney,7.4,94.0
+m/incredibles_2,Incredibles 2,2018,Disney,7.6,93.0
+m/enchanted,Enchanted,2007,Disney,7.1,93.0
+m/the_lion_king,The Lion King,1994,Buena Vista,8.5,93.0
+m/that_thing_you_do,That Thing You Do!,1996,20th Century Fox,,93.0
+m/lady_and_the_tramp,Lady and the Tramp,1955,Buena Vista,7.3,93.0
+m/hugo,Hugo,2011,Paramount,7.5,93.0
+m/1197696-fantastic_mr_fox,Fantastic Mr. Fox,2009,20th Century Fox,7.9,93.0
+m/the_little_mermaid_1989,The Little Mermaid,1989,Disney,7.6,93.0
+m/duma,Duma,2005,Warner Bros.,7.2,93.0
+m/the_witches,The Witches,1990,Warner Bros.,6.8,93.0
+m/antz,Antz,1998,Dreamworks,6.6,92.0
+m/bugs_life,A Bug's Life,1998,Buena Vista,7.2,92.0
+m/arthur_christmas,Arthur Christmas,2011,Sony,7.1,92.0
+m/1041870-matinee,Matinee,1992,Universal,6.9,92.0
+m/ponyo,Ponyo,2009,Disney,7.6,92.0
+m/winnie_the_pooh_2011,Winnie the Pooh,2011,Disney,7.1,91.0
+m/how_to_train_your_dragon_2,How to Train Your Dragon 2,2014,20th Century Fox,7.8,91.0
+m/james_and_the_giant_peach,James and the Giant Peach,1996,Buena Vista,6.7,91.0
+m/teen_titans_go_to_the_movies,Teen Titans Go! To the Movies,2018,Warner Bros.,,91.0
+m/willy_wonka_and_the_chocolate_factory,Willy Wonka and the Chocolate Factory,1971,Paramount,,90.0
+m/disneynature_bears,Disneynature Bears,2014,Disney,,90.0
+m/harry_potter_and_the_prisoner_of_azkaban,Harry Potter and the Prisoner of Azkaban,2004,Warner Bros.,7.9,90.0
+m/how_to_train_your_dragon_the_hidden_world,How to Train Your Dragon: The Hidden World,2019,Universal,7.4,90.0
+m/frozen_2013,Frozen,2013,Disney,7.4,90.0
+m/the_lego_batman_movie,The Lego Batman Movie,2017,Warner Bros.,7.3,90.0
+m/how_green_was_my_valley,How Green Was My Valley,1941,20th Century Fox,7.7,89.0
+m/the_kid_who_would_be_king,The Kid Who Would Be King,2019,20th Century Fox,6.1,89.0
+m/1019187-sleeping_beauty,Sleeping Beauty,1959,Buena Vista,7.2,89.0
+m/karate_kid,The Karate Kid,1984,Columbia Pictures,7.3,89.0
+m/1010939-jason_and_the_argonauts,Jason and the Argonauts,1963,Columbia Pictures,7.3,89.0
+m/tangled,Tangled,2010,Disney,7.7,89.0
+m/shrek_2,Shrek 2,2004,Dreamworks,7.3,89.0
+m/1004151-christmas_story,A Christmas Story,1983,MGM,7.9,89.0
+m/big_hero_6,Big Hero 6,2014,Disney,7.8,89.0
+m/ralph_breaks_the_internet,Ralph Breaks the Internet,2018,Disney,7.0,88.0
+m/millions,Millions,2005,20th Century Fox,6.8,88.0
+m/1045518-secret_garden,The Secret Garden,1993,Warner Bros.,7.3,88.0
+m/petes_dragon_2016,Pete's Dragon,2016,Disney,6.7,88.0
+m/rango,Rango,2011,Paramount,7.2,88.0
+m/onward,Onward,2020,Disney,7.4,88.0
+m/freaky_friday,Freaky Friday,2003,Buena Vista,6.3,88.0
+m/shrek,Shrek,2001,Dreamworks,7.9,88.0
+m/harry_potter_and_the_goblet_of_fire,Harry Potter and the Goblet of Fire,2005,Warner Bros.,7.7,88.0
+m/1031385-jungle_book,The Jungle Book,1967,Buena Vista,7.6,88.0
+m/howls_moving_castle,Howl's Moving Castle,2005,Buena Vista,8.2,87.0
+m/kung_fu_panda,Kung Fu Panda,2008,Paramount,7.6,87.0
+m/the_peanuts_movie,The Peanuts Movie,2015,20th Century Fox,7.0,87.0
+m/peewees_big_adventure,Pee-wee's Big Adventure,1985,Warner Bros.,7.0,87.0
+m/wreck_it_ralph,Wreck-it Ralph,2012,Disney,,87.0
+m/field_of_dreams,Field of Dreams,1989,Universal,7.5,87.0
+m/1079818-anastasia,Anastasia,1997,20th Century Fox,7.1,86.0
+m/1083414-parent_trap,The Parent Trap,1998,Disney,6.6,86.0
+m/1196077-cloudy_with_a_chance_of_meatballs,Cloudy With a Chance of Meatballs,2009,Sony,,86.0
+m/mulan,Mulan,1998,Buena Vista,7.6,86.0
+m/1209933-puss_in_boots,Puss in Boots,2011,Paramount,6.6,86.0
+m/1196003-princess_and_the_frog,The Princess and the Frog,2009,Disney,7.1,85.0
+m/dora_and_the_lost_city_of_gold,Dora and the Lost City of Gold,2019,Paramount,6.1,85.0
+m/emperors_new_groove,The Emperor's New Groove,2000,Buena Vista,,85.0
+m/bridge_to_terabithia,Bridge to Terabithia,2007,Buena Vista,7.2,85.0
+m/corpse_bride,Tim Burton's Corpse Bride,2005,Warner Bros.,,84.0
+m/cinderella_2013,Cinderella,2015,Disney,6.9,84.0
+m/mad_hot_ballroom,Mad Hot Ballroom,2005,Paramount,,84.0
+m/hercules,Hercules,1997,Buena Vista,7.3,84.0
+m/harry_potter_and_the_half_blood_prince,Harry Potter and the Half-Blood Prince,2009,Warner Bros.,7.6,84.0
+m/charlie_and_the_chocolate_factory,Charlie and the Chocolate Factory,2005,Warner Bros.,6.7,83.0
+m/sound_of_music,The Sound of Music,1965,20th Century Fox,8.1,83.0
+m/fiddler_on_the_roof,Fiddler on the Roof,1971,United Artists,8.0,83.0
+m/harry_potter_and_the_chamber_of_secrets,Harry Potter and the Chamber of Secrets,2002,Warner Bros.,7.4,82.0
+m/mr_peabody_and_sherman,Mr. Peabody & Sherman,2014,20th Century Fox,6.8,81.0
+m/island_of_lemurs_madagascar,Island Of Lemurs: Madagascar,2014,Warner Bros.,,81.0
+m/fantasia_2000,Fantasia 2000,2000,Buena Vista,,81.0
+m/harry_potter_and_the_sorcerers_stone,Harry Potter and the Sorcerer's Stone,2001,Warner Bros.,7.6,81.0
+m/1214097-despicable_me,Despicable Me,2010,Universal,7.6,81.0
+m/1016213-peter_pan,Peter Pan,1953,Disney,7.3,81.0
+m/dolphin_tale,Dolphin Tale,2011,Warner Bros.,6.8,81.0
+m/kung_fu_panda_the_kaboom_of_doom,Kung Fu Panda 2,2011,Paramount,7.2,81.0
+m/stuart_little_2,Stuart Little 2,2002,Columbia Pictures,5.5,81.0
+m/mcfarland_usa,McFarland USA,2015,Disney,,81.0
+m/the_spongebob_movie_sponge_out_of_water,The SpongeBob Movie: Sponge Out of Water,2015,Paramount,6.0,81.0
+m/the_neverending_story_1984,The Neverending Story,1984,Warner Bros.,,80.0
+m/wild_thornberrys_movie,The Wild Thornberrys Movie,2002,Paramount,5.6,80.0
+m/muppets_most_wanted,Muppets Most Wanted,2014,Disney,6.4,80.0
+m/monsters_university,Monsters University,2013,Disney,7.2,80.0
+m/poohs_heffalump_movie,Pooh's Heffalump Movie,2005,Buena Vista,6.4,80.0
+m/prince_of_egypt,The Prince of Egypt,1998,Dreamworks,7.1,80.0
+m/1057637-jungle_book,Rudyard Kipling's The Jungle Book,1994,Buena Vista,,80.0
+m/dark_crystal,The Dark Crystal,1982,Sony,,79.0
+m/horton-hears-a-who2008,Dr. Seuss' Horton Hears a Who!,2008,20th Century Fox,,79.0
+m/surfs_up,Surf's Up,2007,Sony,6.7,79.0
+m/madagascar_3_europes_most_wanted_2012,Madagascar 3: Europe's Most Wanted,2012,Paramount,6.8,78.0
+m/charlottes_web,Charlotte's Web,2006,Paramount,6.3,78.0
+m/goosebumps_2015,Goosebumps,2015,Sony,6.3,78.0
+m/brave_2012,Brave,2012,Disney,7.1,78.0
+m/holes,Holes,2003,Buena Vista,7.0,78.0
+m/two_brothers,Two Brothers,2004,Universal,7.0,78.0
+m/harry_potter_and_the_order_of_the_phoenix,Harry Potter and the Order of the Phoenix,2007,Warner Bros.,7.5,78.0
+m/rudy,Rudy,1993,Sony,7.5,78.0
+m/ice_age,Ice Age,2002,20th Century Fox,7.5,77.0
+m/adventures_of_elmo_in_grouchland,The Adventures of Elmo in Grouchland,1999,Columbia Pictures,,77.0
+m/frozen_ii,Frozen II,2019,Disney,6.8,77.0
+m/1023543-white_christmas,White Christmas,1954,Paramount,7.5,77.0
+m/harry_potter_and_the_deathly_hallows_part_1,Harry Potter and the Deathly Hallows - Part 1,2010,Warner Bros.,7.7,77.0
+m/1128577-peter_pan,Peter Pan,2003,Universal,6.8,77.0
+m/the_good_dinosaur,The Good Dinosaur,2015,Disney,6.7,76.0
+m/spies_in_disguise,Spies in Disguise,2019,20th Century Fox,6.8,76.0
+m/happy_feet,Happy Feet,2006,Warner Bros.,6.4,76.0
+m/trolls,Trolls,2016,Dreamworks,6.4,76.0
+m/jumanji_welcome_to_the_jungle,Jumanji: Welcome to the Jungle,2017,Columbia Pictures,6.9,76.0
+m/chronicles_of_narnia_lion_witch_wardrobe,"The Chronicles of Narnia: The Lion, The Witch and The Wardrobe",2005,Buena Vista,6.9,76.0
+m/muppet_christmas_carol,The Muppet Christmas Carol,1992,Buena Vista,7.7,76.0
+m/zathura,Zathura: A Space Adventure,2005,Sony,6.2,76.0
+m/nanny_mcphee_returns,Nanny McPhee Returns,2010,Universal,6.1,76.0
+m/rugrats_in_paris,Rugrats in Paris - The Movie,2000,Paramount,6.1,76.0
+m/teachers_pet_2004,Teacher's Pet,2004,Buena Vista,,76.0
+m/over_the_hedge,Over the Hedge,2006,Dreamworks,6.7,75.0
+m/despicable_me_2,Despicable Me 2,2013,Universal,7.3,75.0
+m/monster_house,Monster House,2006,Sony,6.6,75.0
+m/cars,Cars,2006,Buena Vista,7.2,75.0
+m/smallfoot,Smallfoot,2018,Warner Bros.,6.6,75.0
+m/rise_of_the_guardians_2012,Rise of the Guardians,2012,Paramount,7.2,75.0
+m/fantastic_beasts_and_where_to_find_them,Fantastic Beasts and Where to Find Them,2016,Warner Bros.,7.2,74.0
+m/the_bfg_2016,The BFG,2016,Disney,6.3,74.0
+m/jimmy_neutron_boy_genius,Jimmy Neutron - Boy Genius,2001,Paramount,,74.0
+m/the_adventures_of_tintin,The Adventures of Tintin,2011,Paramount,7.3,74.0
+m/water_horse,The Water Horse: Legend of the Deep,2007,Sony,6.4,74.0
+m/my_dog_skip,My Dog Skip,2000,Warner Bros.,7.0,73.0
+m/1142872-sky_high,Sky High,2005,Buena Vista,6.3,73.0
+m/monsters_vs_aliens,Monsters vs. Aliens,2009,Paramount,,73.0
+m/nanny_mcphee,Nanny McPhee,2006,Universal,6.6,73.0
+m/christopher_robin,Christopher Robin,2018,Disney,7.2,73.0
+m/where_the_wild_things_are,Where the Wild Things Are,2009,Warner Bros.,6.7,73.0
+m/flushed_away,Flushed Away,2006,Paramount,6.6,73.0
+m/lemony_snicket,Lemony Snicket's A Series of Unfortunate Events,2004,Paramount,,72.0
+m/megamind,Megamind,2010,Paramount,7.3,72.0
+m/labyrinth,Labyrinth,1986,Sony,7.3,72.0
+m/rio,Rio,2011,20th Century Fox,6.9,72.0
+m/hannah-montanamiley-cyrus-best-of-both-worlds-concert-tour,Hannah Montana/Miley Cyrus: Best of Both Worlds Concert Tour,2008,Disney,,71.0
+m/1073037-hunchback_of_notre_dame,The Hunchback of Notre Dame,1996,Disney,7.0,71.0
+m/the-croods,The Croods,2013,20th Century Fox,7.2,71.0
+m/into_the_woods_2014,Into the Woods,2014,Disney,5.9,71.0
+m/mrs_doubtfire,Mrs. Doubtfire,1993,20th Century Fox,7.1,71.0
+m/cars_3,Cars 3,2017,Disney,6.7,70.0
+m/spirit_stallion_of_the_cimarron,Spirit - Stallion of the Cimarron,2002,Dreamworks,,70.0
+m/ramona_and_beezus,Ramona and Beezus,2010,20th Century Fox,6.5,70.0
+m/cloudy_with_a_chance_of_meatballs_2_2013,Cloudy with a Chance of Meatballs 2,2013,Sony,6.3,70.0
+m/piglets_big_movie,Piglet's Big Movie,2003,Disney,6.1,70.0
+m/1153951-curious_george,Curious George,2006,Universal,6.5,70.0
+m/1001193-around_the_world_in_80_days,Around the World in 80 Days,1956,United Artists,6.7,69.0
+m/treasure_planet,Treasure Planet,2002,Buena Vista,7.2,69.0
+m/pokemon_detective_pikachu,Pokémon Detective Pikachu,2019,Warner Bros.,6.5,68.0
+m/spongebob_squarepants_movie,The SpongeBob SquarePants Movie,2004,Paramount,7.1,68.0
+m/chronicles_of_narnia_prince_caspian,The Chronicles of Narnia: Prince Caspian,2008,Disney,6.5,67.0
+m/meet_the_robinsons,Meet the Robinsons,2007,Buena Vista,6.8,67.0
+m/stuart_little,Stuart Little,1999,Columbia Pictures,6.0,67.0
+m/dolphin_tale_2,Dolphin Tale 2,2014,Warner Bros.,6.4,66.0
+m/the_house_with_a_clock_in_its_walls,The House with a Clock in Its Walls,2018,Universal,6.0,66.0
+m/turbo_2013,Turbo,2013,Dreamworks,6.4,66.0
+m/karate_kid_2010,The Karate Kid,2010,Sony,6.2,66.0
+m/storks,Storks,2016,Warner Bros.,6.8,66.0
+m/rocketeer,The Rocketeer,1991,Disney,6.5,65.0
+m/epic_2013,Epic,2013,20th Century Fox,6.6,65.0
+m/babe_pig_in_the_city,Babe: Pig in the City,1998,Universal,5.8,65.0
+m/home_alone,Home Alone,1990,20th Century Fox,7.7,65.0
+m/dreamer,Dreamer: Inspired by a True Story,2005,Dreamworks,,64.0
+m/the_frighteners,The Frighteners,1996,Universal,7.1,64.0
+m/madagascar_escape_2_africa,Madagascar: Escape 2 Africa,2008,Paramount,6.6,64.0
+m/miss_peregrines_home_for_peculiar_children,Miss Peregrine's Home for Peculiar Children,2016,20th Century Fox,6.7,64.0
+m/robots,Robots,2005,20th Century Fox,6.4,64.0
+m/1097046-dinosaur,Dinosaur,2000,Buena Vista,6.4,64.0
+m/peter_rabbit_2018,Peter Rabbit,2018,Columbia Pictures,6.6,63.0
+m/sandlot,The Sandlot,1993,20th Century Fox,7.8,63.0
+m/muppets_from_space,Muppets From Space,1999,Columbia Pictures,,63.0
+m/ant_bully,The Ant Bully,2006,Warner Bros.,5.8,62.0
+m/paulie,Paulie,1998,Dreamworks,6.5,62.0
+m/hotel_transylvania_3_summer_vacation,Hotel Transylvania 3: Summer Vacation,2018,Sony,6.3,62.0
+m/the-tigger-movie,The Tigger Movie,2000,Buena Vista,6.3,62.0
+m/journey_to_the_center_of_the_earth_2008,Journey to the Center of the Earth,2008,Warner Bros.,5.8,61.0
+m/10005499-oliver_twist,Oliver Twist,2005,Sony,6.8,61.0
+m/alexander_and_the_terrible_horrible_no_good_very_bad_day,"Alexander and the Terrible, Horrible, No Good, Very Bad Day",2014,Disney,6.2,61.0
+m/the_grinch,The Grinch,2018,Universal,6.3,60.0
+m/tuck_everlasting,Tuck Everlasting,2002,Buena Vista,6.6,60.0
+m/recess_schools_out,Recess: School's Out,2001,Buena Vista,6.5,60.0
