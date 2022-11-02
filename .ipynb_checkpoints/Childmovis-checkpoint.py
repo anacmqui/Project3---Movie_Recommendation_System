@@ -23,7 +23,7 @@ hide_table_row_index = """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
 
-st.subheader('Best movies for kids')
+st.subheader('What are the best movies for kids?')
 
 #st.subheader('*Where are the orders going to?*')
 
