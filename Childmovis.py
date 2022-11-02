@@ -6,7 +6,7 @@ from datetime import time
 kids = pd.read_csv('Documents/GitHub/Project3MRS/kids_imdb_rt1.csv')
 #directors = pd.read_csv('Documents/GitHub/Project3MRS/Director question.csv')
 
-date_range = st.slider('Choose the year interval:', 1910, 2022, value = (1990, 2000))
+date_range = st.slider('Choose the year interval:', 1900, 2022, value = (1990, 2000))
 
 #st.subheader('What are the best movies of your favourite director?')
 
@@ -26,4 +26,6 @@ st.subheader('Best movies for kids')
 options_kids = st.selectbox('Choose the studio:', kids['Studio'].unique())
                             
 df_mov = kids[(kids['Studio']==options_kids) & (kids['Year'] > date_range[0]) & (kids['Year'] < date_range[1])].head(5)#[['movie_title','tomatometer_rating']]
+#df_mov.round({'IMDb rating': 2, 'Rotten Tomatoes rating': 2})
+#df_mov.round(2)
 st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by='Year', ascending=False))
