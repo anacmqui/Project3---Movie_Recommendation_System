@@ -3,8 +3,8 @@ import numpy as np
 import streamlit as st
 from datetime import time
 
-kids = pd.read_csv('Downloads/out2 (5).csv')
-directors = pd.read_csv('Documents/GitHub/Project3MRS/Director question.csv')
+kids = pd.read_csv('Documents/GitHub/Project3MRS/kids_imdb_rt1.csv')
+#directors = pd.read_csv('Documents/GitHub/Project3MRS/Director question.csv')
 
 date_range = st.slider('Choose the year interval:', 1910, 2022, value = (1990, 2000))
 
@@ -22,18 +22,8 @@ st.subheader('Best movies for kids')
 
 #st.subheader('*Where are the orders going to?*')
 
-kids['Rotten Tomatoes rating'] = kids['Rotten Tomatoes rating'].apply(lambda x: int(x))
-
-def rate(x):
-    if kids['Movie Title'] == directors['Movie title']:
-        return x
-
-kids['IMDb rating'] = directors['IMDb rating'].apply(rate)
-
-
-
 
 options_kids = st.selectbox('Choose the studio:', kids['Studio'].unique())
                             
 df_mov = kids[(kids['Studio']==options_kids) & (kids['Year'] > date_range[0]) & (kids['Year'] < date_range[1])].head(5)#[['movie_title','tomatometer_rating']]
-st.table(df_mov[['Movie Title','Rotten Tomatoes rating', 'Year', 'IMDb rating']].sort_values(by='Year', ascending=False))
+st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by='Year', ascending=False))
