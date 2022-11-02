@@ -14,8 +14,6 @@ options_dir = st.selectbox('Choose the director:', directors['Director name'].un
                                 
 df_dir = directors[(directors['Director name']==options_dir) & (directors['Year'] > date_range[0]) & (directors['Year'] < date_range[1])].head(5)
 
-#st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
-
 hide_table_row_index = """
             <style>
             thead tr th:first-child {display:none}
@@ -43,4 +41,4 @@ hide_table_row_index = """
             </style>
             """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
-st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
+st.table(df_mov[['Movie Title', 'Year', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
