@@ -77,3 +77,14 @@ st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating',
 actor
 
 
+#confirm with Ana
+
+
+hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+st.markdown(hide_table_row_index, unsafe_allow_html=True)
+#st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))

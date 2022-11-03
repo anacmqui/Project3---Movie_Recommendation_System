@@ -75,5 +75,20 @@ st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating',
     # ACTORS: Question about the actors 
 
 actor
+st.subheader('Top 10 actors/actresses which appeared more time in the top 1000 movies more voted')
 
+options_actors = st.selectbox('Choose the actor / actress:', actor['category'].unique())
 
+#confirm with Ana
+df_actor = actor[(actor['category']==options_actors)].head(10)
+
+st.table(df_actor[['Staff name','IMDb rating', 'Nb movies', 'Ranking']].sort_values(by=['Ranking'], ascending=False))
+
+hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+st.markdown(hide_table_row_index, unsafe_allow_html=True)
+#st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
