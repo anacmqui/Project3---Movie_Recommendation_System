@@ -76,9 +76,12 @@ st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating',
 
 actor
 
+options_actors = st.selectbox('Choose the actor / actress:', actor['category'].unique())
 
 #confirm with Ana
+df_actor = actor[(actor['category']==options_actors)].head(10)
 
+st.table(df_actor[['Staff name','IMDb rating', 'Nb movies', 'Ranking']].sort_values(by=['Ranking'], ascending=False))
 
 hide_table_row_index = """
             <style>
