@@ -30,18 +30,17 @@ hide_table_row_index = """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5))
 
-    # KIDS: Question about the best movies for kids 
+# Try to round the IMDb and RT rating 
+#st.table(df_genre.style.format("{:.2%}"))
 
-st.subheader('Best movies for kids')
+    # ACTORS: Question about the actors 
+st.subheader('What are the best actors/actresses?')
 
-#st.subheader('*Where are the orders going to?*')
+options_actors = st.selectbox('Choose the actor / actress:', actor['category'].unique())
 
-options_kids = st.selectbox('Choose the studio:', kids['Studio'].unique())
-                            
-df_mov = kids[(kids['Studio']==options_kids) & (kids['Year'] >= date_range[0]) & (kids['Year'] <= date_range[1])]#[['movie_title','tomatometer_rating']]
-#df_mov.round({'IMDb rating': 2, 'Rotten Tomatoes rating': 2})
-#df_mov.round(2)
-#st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by='Year', ascending=False))
+df_actor = actor[(actor['category']==options_actors)].head(10)
+
+st.table(df_actor[['Staff name','IMDb rating', 'Nb movies', 'Ranking']].sort_values(by=['Ranking'], ascending=False))
 
 hide_table_row_index = """
             <style>
@@ -50,7 +49,11 @@ hide_table_row_index = """
             </style>
             """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
-st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5))
+#st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
+
+
+
+
 
     # GENRE: Question about the genre 
 st.subheader('What are the top 5 movies per genre and best reviews?')
@@ -69,17 +72,18 @@ st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating', 'Genre']].sort_values(by=['IMDb rating'], ascending=False).head(5))
 
-# Try to round the IMDb and RT rating 
-#st.table(df_genre.style.format("{:.2%}"))
+    # KIDS: Question about the best movies for kids 
 
-    # ACTORS: Question about the actors 
+st.subheader('What are the best movies for kids?')
 
-options_actors = st.selectbox('Choose the actor / actress:', actor['category'].unique())
+#st.subheader('*Where are the orders going to?*')
 
-#confirm with Ana
-df_actor = actor[(actor['category']==options_actors)].head(10)
-
-st.table(df_actor[['Staff name','IMDb rating', 'Nb movies', 'Ranking']].sort_values(by=['Ranking'], ascending=False))
+options_kids = st.selectbox('Choose the studio:', kids['Studio'].unique())
+                            
+df_mov = kids[(kids['Studio']==options_kids) & (kids['Year'] >= date_range[0]) & (kids['Year'] <= date_range[1])]#[['movie_title','tomatometer_rating']]
+#df_mov.round({'IMDb rating': 2, 'Rotten Tomatoes rating': 2})
+#df_mov.round(2)
+#st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by='Year', ascending=False))
 
 hide_table_row_index = """
             <style>
@@ -88,4 +92,4 @@ hide_table_row_index = """
             </style>
             """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
-#st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
+st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5))
