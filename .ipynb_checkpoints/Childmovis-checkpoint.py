@@ -74,8 +74,6 @@ st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating',
 
     # ACTORS: Question about the actors 
 
-st.subheader('Top 10 actors/actresses which appeared more time in the top 1000 movies more voted')
-
 options_actors = st.selectbox('Choose the actor / actress:', actor['category'].unique())
 
 #confirm with Ana

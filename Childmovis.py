@@ -74,8 +74,6 @@ st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating',
 
     # ACTORS: Question about the actors 
 
-actor
-
 options_actors = st.selectbox('Choose the actor / actress:', actor['category'].unique())
 
 #confirm with Ana
