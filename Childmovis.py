@@ -28,9 +28,9 @@ elif add_selectbox == 'Directors & Genres':
     # Created the interval year slider 
     date_range = st.slider('Choose the year interval:', 1900, 2022, value = (1990, 2000))
 
-    image_director = Image.open('director_picto.png')
-    image_director = image_director.resize((150, 150))
-    st.image(image_director)
+    #image_director = Image.open('director_picto.png')
+    #image_director = image_director.resize((150, 150))
+    #st.image(image_director)
 
 
     # DIRECTORS : Question about the best movies per director 
@@ -52,10 +52,11 @@ elif add_selectbox == 'Directors & Genres':
                 </style>
                 """
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
-    st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5))
+    st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
 
-
+#st.dataframe(df.style.format("{:.2%}"))
+#st.table(df.style.format({'Quantidade': '{:.1f}', 'PVP': '{:.2f}', 'Dias de Venda': '{:.2f}'}))
 
     # GENRE: Question about the genre 
 
@@ -77,7 +78,7 @@ elif add_selectbox == 'Directors & Genres':
                 """
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
-    st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating', 'Genre']].sort_values(by=['IMDb rating'], ascending=False).head(5))
+    st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating', 'Genre']].sort_values(by=['IMDb rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
 
 
@@ -143,9 +144,9 @@ else:
                 </style>
                 """
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
-    st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5))
+    st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
-    image_kids = Image.open('child_pictures.png')
+    image_kids = Image.open('../forkid_picto.png')
     #image_kids = image_kids.resize((600, 400))
     # st.image(image_kids, width = 150)
     st.image(image_kids)
