@@ -28,9 +28,9 @@ elif add_selectbox == 'Directors & Genres':
     # Created the interval year slider 
     date_range = st.slider('Choose the year interval:', 1900, 2022, value = (1990, 2000))
 
-    #image_director = Image.open('director_picto.png')
-    #image_director = image_director.resize((150, 150))
-    #st.image(image_director)
+    image_director = Image.open('director_picto.png')
+    image_director = image_director.resize((150, 150))
+    st.image(image_director)
 
 
     # DIRECTORS : Question about the best movies per director 
@@ -96,7 +96,7 @@ elif add_selectbox == "Actors & Actresses":
     #st.table(df_genre.style.format("{:.2%}"))
 
         # ACTORS: Question about the actors 
-    st.subheader('What are the best Actors/Actresses?')
+    st.subheader('What are the best Actors / Actresses?')
 
     actor['category'] = actor['category'].str.title()
 
@@ -104,7 +104,7 @@ elif add_selectbox == "Actors & Actresses":
 
     df_actor = actor[(actor['category']==options_actors)].head(10)
 
-    st.table(df_actor[['Staff name','IMDb rating', 'Nb movies', 'Ranking']].sort_values(by=['Ranking'], ascending=False))
+    st.table(df_actor[['Staff name','IMDb rating', 'Nb movies', 'Ranking']].sort_values(by=['Ranking'], ascending=False).style.format({'IMDb rating': '{:.1f}', 'Ranking': '{:.1f}'}))
 
     hide_table_row_index = """
                 <style>
@@ -146,7 +146,7 @@ else:
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
     st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
-    image_kids = Image.open('../forkid_picto.png')
+    image_kids = Image.open('child_pictures.png')
     #image_kids = image_kids.resize((600, 400))
     # st.image(image_kids, width = 150)
     st.image(image_kids)
