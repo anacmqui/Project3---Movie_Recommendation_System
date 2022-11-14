@@ -16,12 +16,11 @@ rec_sys = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MR
 
 add_selectbox = st.sidebar.selectbox(
     "Select the topic you want",
-    ['Introduction', 'Directors & Genres', "Actors & Actresses", "Kids & Family", 'Recommendation System'],
-    )
+    ['Introduction', 'Directors & Genres', "Actors & Actresses", "Kids & Family", 'Recommendation System'])
 
 if add_selectbox == 'Introduction':
 
-    image1 = Image.open('intro_picture.jpg')
+    image1 = Image.open('Documents/GitHub/Project3MRS/8_Pictures/intro_picture.jpg')
     #image1 = image1.resize((1200, 800))
     #st.image(image1)
 
@@ -58,10 +57,6 @@ elif add_selectbox == 'Directors & Genres':
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
     st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
-
-#st.dataframe(df.style.format("{:.2%}"))
-#st.table(df.style.format({'Quantidade': '{:.1f}', 'PVP': '{:.2f}', 'Dias de Venda': '{:.2f}'}))
-
     # GENRE: Question about the genre 
 
     #image_genre = Image.open('genre_picto.png')
@@ -85,9 +80,6 @@ elif add_selectbox == 'Directors & Genres':
     st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating', 'Genre']].sort_values(by=['IMDb rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
 
-
-
-
 elif add_selectbox == "Actors & Actresses":
 
 
@@ -96,8 +88,6 @@ elif add_selectbox == "Actors & Actresses":
     # st.image(image_director, width = 150)
     #st.image(image_director)
 
-    # Try to round the IMDb and RT rating 
-    #st.table(df_genre.style.format("{:.2%}"))
 
         # ACTORS: Question about the actors 
     st.subheader('What are the best Actors / Actresses?')
@@ -117,9 +107,6 @@ elif add_selectbox == "Actors & Actresses":
                 </style>
                 """
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
-    #st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
-
-
 
 
 elif add_selectbox == "Kids & Family":
@@ -155,7 +142,12 @@ elif add_selectbox == "Kids & Family":
     #st.image(image_kids)
 
 else:
-    options_reco = st.selectbox('Choose a movie:', rec_sys['primaryTitle'].unique())
+    st.subheader('What is your favourite movie?')
+    
+    rec_sys['Year'] = rec_sys['startYear_x'].astype(str)
+    rec_sys['title_year'] = rec_sys['primaryTitle']+' '+rec_sys['Year']
+    
+    options_reco = st.selectbox('Choose a movie:', rec_sys['title_year'].unique())
     
     X=rec_sys[['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 'animation', 'biography',
        'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi',
@@ -166,12 +158,10 @@ else:
     model = NearestNeighbors(n_neighbors=6)
     model.fit(X)
     
-    array_1, array_2 = model.kneighbors(rec_sys.loc[rec_sys['primaryTitle'] == options_reco, ['startYear_st', 'runtimeMinutes_st', 
-    'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 'animation', 'biography','comedy', 'crime', 'documentary',
-    'drama', 'family', 'fantasy', 'fi',
-    'game', 'history', 'horror', 'music', 'musical', 'mystery', 'news',
-    'reality', 'romance', 'sci', 'short', 'show', 'sport', 'talk',
-    'thriller', 'tv', 'war', 'western']])
+    array_1, array_2 = model.kneighbors(rec_sys.loc[rec_sys['title_year'] == options_reco, ['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 
+    'animation', 'biography','comedy', 'crime', 'documentary',
+    'drama', 'family', 'fantasy', 'fi','game', 'history', 'horror', 'music', 'musical', 'mystery', 'news',
+    'reality', 'romance', 'sci', 'short', 'show', 'sport', 'talk','thriller', 'tv', 'war', 'western']])
     
     index_array = array_2
     index_list = index_array.flatten().tolist() #to appear in vertical
@@ -188,5 +178,7 @@ else:
                 </style>
                 """
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
-    
-    st.table(Output_final[['primaryTitle', 'genres_x', 'averageRating']].style.format({'averageRating': '{:.1f}'}))
+    Output_final = Output_final.rename(columns = {'averageRating':'IMDb rating', 'primaryTitle':'Movie title',
+                                                  'genres_x':'Genres'})
+
+    st.table(Output_final[['Movie title', 'Genres', 'IMDb rating']].iloc[1:6].style.format({'IMDb rating': '{:.1f}'}))
