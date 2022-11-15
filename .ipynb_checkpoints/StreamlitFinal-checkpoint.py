@@ -20,9 +20,9 @@ add_selectbox = st.sidebar.selectbox(
 
 if add_selectbox == 'Introduction':
 
-    image1 = Image.open('Documents/GitHub/Project3MRS/8_Pictures/intro_picture.jpg')
+    image1 = Image.open('/../8_Pictures/intro_picture.jpg')
     #image1 = image1.resize((1200, 800))
-    #st.image(image1)
+    st.image(image1)
 
 
 elif add_selectbox == 'Directors & Genres':
