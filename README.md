@@ -1,8 +1,6 @@
 # GitHub Documentation - Movie recommandation - Data Breakers
 
 
-# Project description
-
 # Context 
 
 A movie theater contacted us because he has decided to go digital by creating a website designed for local people.
