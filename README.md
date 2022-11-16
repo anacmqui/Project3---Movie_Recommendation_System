@@ -70,18 +70,23 @@ OUT:
 -table ‘df_titleprincipals2.pickle’
 
   2) "Project3 - IMDB Title Basics.ipynb"
+
 Goal: clean the table "title.basics"
+
 IN:
 -table "title.basics" from IMDb site
 -table 'df_titlebasicsv2.pickle'
 
   3) "Filter_5_percent_movies.ipynb"
+
 Goal: Main file, where the filters and merges where made. It's from here that the tables for Machine Learning algorithm are pushed.
+
 IN:
 -title_ratings (from IMDB)
 -name_basics (from IMDB)
 -"df_titleprincipals2.pickle" - from "Project3 - IMDB Title Principals.ipynb"
 -"df_titlebasicsv2.pickle" - from "Project3 - IMDB Title Basics.ipynb"
+
 OUT:
 -'ppl_names_allmovies.csv' - Table with All the actors/actresses and movies
 -'movies_5percent.csv' - Table with 5% of the movies, used for the other queries
@@ -89,59 +94,78 @@ OUT:
 -'df_ml_100_vect.pickle' - Table with all movies per genre, 1 line per movie, used for machine learning
 
   4) "ML_vectorize_Proj3.ipynb"
+
 Goal: final file with the algorithm to show recommendations
+
 IN:
 -"df_ml_100_vect.pickle" - from "Filter_5_percent_movies.ipynb"
 
   5) RT - Kids movies & Clean dataset for join IMDB (Kaggle)
+
 Goal: Find the best movies for kids based on the top studios
+
 IN: 
 -rotten_tomatoes_movies.csv (from: kaggle database)
+
 OUT: 
 - kids_movies.csv (to: colab 4)
 - out4.csv (new column ‘dir_mov’ for join with IMDB) (to: colab 3 / colab 5)
 
   6) RT-IMDB merge + Directors.ipynb (Colab)
+
 Goal: Join RT and IMDb tables // Get director’s table for streamlit 
+
 IN: 
 - out4.csv (from: colab 2)
 - tprn_10 (from: colab 1)
+
 OUT: 
 - imdb_rt_ratings.csv (to: colab 4)
 - directors_rt_imdb1.csv (to: streamlit / colab 5)
 
   7) Kids movies - IMDb and RT.ipynb (Colab)
+
 Goal: Join rating from IMBd with kids table
+
 IN: 
 - imdb_rt_ratings.csv (from: colab 3)
 - kids_movies.csv (from: colab 2)
+
 OUT: 
 - kids_imdb_rt1.csv (to: streamlit)
 
   8) Viz - ratings .ipynb
+
 Goal: Statistics on ratings
+
 IN: 
 - out4.csv (from: colab 2)
 - tprn_10.csv (from: colab 1)
 - directors_rt_imdb1.csv (from: colab 3)
+
 OUT (plots):
 - IMDB ratings distribution 
 - Evolution of movies’ ratings
 - RT vs IMDB ratings
 
   9) Stats_directors_higher_nbmovies
+
 Goal
+
 IN:
 - tprn_10.csv (from: colab 1)
+
 OUT (plots):
-- 
 
   10) list_movies_by_genre.ipynb:
+
 Goal: List of the movies by genre (5% most voted movies)
+
 IN: 
 - title.basics.tsv.gz (from: IMDb database)
 - title.ratings.tsv.gz (from: IMDb database)
 - Rating%20RT.csv
+
 OUT:
 - GenreQuestion.csv (to: streamlit)
  
