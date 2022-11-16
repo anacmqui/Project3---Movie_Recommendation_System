@@ -14,7 +14,7 @@ kids = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/m
 directors = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/directors_rt_imdb1.csv')
 genre = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/GenreQuestion.csv')
 actor = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/bestactors.csv')
-rec_sys = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/2_MachineLearning/movies_reco_system.csv')
+rec_sys = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/movies_reco_system_5.csv')
 mov_poster = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/tmdb_id.csv')
 
 st.set_page_config(layout="wide")
@@ -53,19 +53,12 @@ def movie_recommendation():
 
     options_reco = st.selectbox('Choose a movie:', rec_sys['title_year'].unique())
 
-    X=rec_sys[['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 'animation', 'biography',
-        'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi',
-        'game', 'history', 'horror', 'music', 'musical', 'mystery', 'news',
-        'reality', 'romance', 'sci', 'short', 'show', 'sport', 'talk',
-        'thriller', 'tv', 'war', 'western']]     
+    X=rec_sys[['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure' ,'animation' ,'biography', 'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi', 'history' ,'horror' ,'music', 'musical', 'mystery' ,'news' ,'reality', 'romance' ,'sci' ,'sport' ,'thriller','tv', 'war' ,'western']]          
 
     model = NearestNeighbors(n_neighbors=6)
     model.fit(X)
 
-    array_1, array_2 = model.kneighbors(rec_sys.loc[rec_sys['title_year'] == options_reco, ['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 
-    'animation', 'biography','comedy', 'crime', 'documentary',
-    'drama', 'family', 'fantasy', 'fi','game', 'history', 'horror', 'music', 'musical', 'mystery', 'news',
-    'reality', 'romance', 'sci', 'short', 'show', 'sport', 'talk','thriller', 'tv', 'war', 'western']])
+    array_1, array_2 = model.kneighbors(rec_sys.loc[rec_sys['title_year'] == options_reco, ['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure' ,'animation' ,'biography', 'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi', 'history' ,'horror' ,'music', 'musical', 'mystery' ,'news' ,'reality', 'romance' ,'sci' ,'sport' ,'thriller','tv', 'war' ,'western']])
 
     index_array = array_2
     index_list = index_array.flatten().tolist() #to appear in vertical
