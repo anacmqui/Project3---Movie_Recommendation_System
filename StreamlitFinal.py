@@ -15,7 +15,7 @@ directors = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3
 genre = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/GenreQuestion.csv')
 actor = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/bestactors.csv')
 rec_sys = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/movies_reco_system_5.csv')
-mov_poster = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/tmdb_id.csv')
+mov_poster = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/tmdb_10.csv')
 
 st.set_page_config(layout="wide")
 
@@ -206,7 +206,7 @@ else:
     st.subheader('What is your favourite movie?')
 
     Output_final = movie_recommendation()
-    movies_poster = pd.merge(Output_final, mov_poster, how='left', left_on='Movie title', right_on='original_title')
+    movies_poster = pd.merge(Output_final, mov_poster, how='left', left_on='tconst', right_on='imdb_id')
     movies_poster['id'].fillna(0, inplace=True)
     movies_poster['poster'] = movies_poster['id'].apply(fetch_poster)
     
