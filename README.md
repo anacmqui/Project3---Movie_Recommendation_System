@@ -27,32 +27,23 @@ All the code is in Github’s folders listed below.
 
 # GitHub folders - Description 
 
-- FinalColabFiles
-What is it? Those are the final Google Colaboratory files that reply to our questions. We also did the statistics on these files. 
+- FinalColabFiles: What is it? Those are the final Google Colaboratory files that reply to our questions. We also did the statistics on these files. 
 
-- Machine Learning
-What is it?  Those are the code for the algorithms, the recommendation system and the input file.
+- Machine Learning: What is it?  Those are the code for the algorithms, the recommendation system and the input file.
 
-- Exploratory Data Analysis 
-What is it? This is our initial analysis on the different datasets. 
+- Exploratory Data Analysis: What is it? This is our initial analysis on the different datasets. 
 
-- LinkingTables
-What is it? Those are the tables we created to go from one file to another. 
+- LinkingTables: What is it? Those are the tables we created to go from one file to another. 
 
-- .ipynb_checkpoints
-What is it? Support files from Streamlit
+- .ipynb_checkpoints: What is it? Support files from Streamlit
 
-- TablesForStreamlit
-What is it? Those are the final tables we used for Streamlit.
+- TablesForStreamlit: What is it? Those are the final tables we used for Streamlit.
 
-- Old 
-What is it? We used these files before and kept them if necessary. 
+- Old: What is it? We used these files before and kept them if necessary. 
 
-- Pictures
-What is it? This is the folder with the pictures we used for Streamlit.
+- Pictures: What is it? This is the folder with the pictures we used for Streamlit.
 
-- StreamlitFinal.py document 
-What is it? This is the final code for the Streamlit. 
+- StreamlitFinal.py document: What is it? This is the final code for the Streamlit. 
 
 # Pre-processing 
 
@@ -69,9 +60,12 @@ For the other queries, we decided to use only the 5% of the dataset also to pres
 1_FinalColabFiles
 
   1) “Project3 - IMDB Title Principals.ipynb”
+
 Goal: clean the table "title.principals"
+
 IN:
 -table "title.principals" from IMDb site
+
 OUT:
 -table ‘df_titleprincipals2.pickle’
 
