@@ -218,36 +218,38 @@ else:
     movies_poster['poster'] = movies_poster['id'].apply(fetch_poster)
     
     #st.table(movies_poster[['Movie title', 'Genres', 'IMDb rating', 'poster']].iloc[1:6].style.format({'IMDb rating': '{:.1f}'}))
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col1:
-        st.text(movies_poster['Movie title'][1])
-        if movies_poster['poster'][1]=='':
-            st.empty()
-        else:
-            st.image(movies_poster['poster'][1])
+    if st.button('Show Recommendation'):
+        
+        col1, col2, col3, col4, col5 = st.columns(5)
+        with col1:
+            st.text(movies_poster['Movie title'][1])
+            if movies_poster['poster'][1]=='':
+                st.empty()
+            else:
+                st.image(movies_poster['poster'][1])
     
-    with col2:
-        st.text(movies_poster['Movie title'][2])
-        if movies_poster['poster'][2]=='':
-            st.empty()
-        else:
-            st.image(movies_poster['poster'][2])
-    with col3:
-        st.text(movies_poster['Movie title'][3])
-        if movies_poster['poster'][3]=='':
-            st.empty()
-        else:
-            st.image(movies_poster['poster'][3])
-    with col4:
-        st.text(movies_poster['Movie title'][4])
-        if movies_poster['poster'][4]=='':
-            st.empty()
-        else:
-            st.image(movies_poster['poster'][4])
-    with col5:
-        st.text(movies_poster['Movie title'][5])
-        if movies_poster['poster'][5]=='':
-            st.empty()
-        else:
-            st.image(movies_poster['poster'][5])
+        with col2:
+            st.text(movies_poster['Movie title'][2])
+            if movies_poster['poster'][2]=='':
+                st.empty()
+            else:
+                st.image(movies_poster['poster'][2])
+        with col3:
+            st.text(movies_poster['Movie title'][3])
+            if movies_poster['poster'][3]=='':
+                st.empty()
+            else:
+                st.image(movies_poster['poster'][3])
+        with col4:
+            st.text(movies_poster['Movie title'][4])
+            if movies_poster['poster'][4]=='':
+                st.empty()
+            else:
+                st.image(movies_poster['poster'][4])
+        with col5:
+            st.text(movies_poster['Movie title'][5])
+            if movies_poster['poster'][5]=='':
+                st.empty()
+            else:
+                st.image(movies_poster['poster'][5])
         
