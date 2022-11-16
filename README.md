@@ -59,7 +59,7 @@ For the other queries, we decided to use only the 5% of the dataset also to pres
 # Navigate collab files and tables
 1_FinalColabFiles
 
-  1) “Project3 - IMDB Title Principals.ipynb”
+**1) “Project3 - IMDB Title Principals.ipynb” **
 
 Goal: clean the table "title.principals"
 
@@ -69,7 +69,8 @@ IN:
 OUT:
 -table ‘df_titleprincipals2.pickle’
 
-  2) "Project3 - IMDB Title Basics.ipynb"
+
+  **2) "Project3 - IMDB Title Basics.ipynb"
 
 Goal: clean the table "title.basics"
 
