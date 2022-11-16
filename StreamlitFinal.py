@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+import requests
+import json
 from datetime import time
 from PIL import Image
 import sklearn
@@ -13,31 +15,34 @@ directors = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3
 genre = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/GenreQuestion.csv')
 actor = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/bestactors.csv')
 rec_sys = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/2_MachineLearning/movies_reco_system.csv')
+mov_poster = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/tmdb_id.csv')
+
+st.set_page_config(layout="wide")
 
 add_selectbox = st.sidebar.selectbox(
     "Select the topic you want",
     ['Introduction', 'Directors & Genres', "Actors & Actresses", "Kids & Family", 'Recommendation System'])
 
 # Introduction
-image1 = Image.open('8_Pictures/intro_picture.jpg')
-image1 = image1.resize((1200, 800))
+#image1 = Image.open('8_Pictures/intro_picture.jpg')
+#image1 = image1.resize((1200, 800))
 
 # Directors & Genres
-image_director = Image.open('8_Pictures/director_picto.png')
-image_director = image_director.resize((150, 150))
+#image_director = Image.open('8_Pictures/director_picto.png')
+#image_director = image_director.resize((150, 150))
 
 directors['Rotten Tomatoes rating'] = directors['Rotten Tomatoes rating']/10
 
-image_genre = Image.open('8_Pictures/genre_picto.png')
-image_genre = image_genre.resize((150, 150))
+#image_genre = Image.open('8_Pictures/genre_picto.png')
+#image_genre = image_genre.resize((150, 150))
 
 # Actors & Actresses
-image_director = Image.open('8_Pictures/actors_picto.png')
-image_director = image_director.resize((150, 150))
+#image_director = Image.open('8_Pictures/actors_picto.png')
+#image_director = image_director.resize((150, 150))
 
 # Kids & Family
-image_kids = Image.open('8_Pictures/child_pictures.png')
-image_kids = image_kids.resize((600, 400))
+#image_kids = Image.open('8_Pictures/child_pictures.png')
+#image_kids = image_kids.resize((600, 400))
 
 # Movie Recommendation 
 
@@ -82,7 +87,18 @@ def movie_recommendation():
     return Output_final
 
 
+def fetch_poster(movie_id):
+    if movie_id==0:
+      return ''
+    else:
+      url = "https://api.themoviedb.org/3/movie/{}?api_key=39976f73499bf65190665011272a5caf".format(movie_id)
+      data = requests.get(url)
+      data = data.json()
+      poster_path = data['poster_path']
+      full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
+      return full_path
 
+# STREAMLIT CODE
 
 
 if add_selectbox == 'Introduction':
@@ -197,5 +213,41 @@ else:
     st.subheader('What is your favourite movie?')
 
     Output_final = movie_recommendation()
-
-    st.table(Output_final[['Movie title', 'Genres', 'IMDb rating']].iloc[1:6].style.format({'IMDb rating': '{:.1f}'}))
+    movies_poster = pd.merge(Output_final, mov_poster, how='left', left_on='Movie title', right_on='original_title')
+    movies_poster['id'].fillna(0, inplace=True)
+    movies_poster['poster'] = movies_poster['id'].apply(fetch_poster)
+    
+    #st.table(movies_poster[['Movie title', 'Genres', 'IMDb rating', 'poster']].iloc[1:6].style.format({'IMDb rating': '{:.1f}'}))
+    col1, col2, col3, col4, col5 = st.columns(5)
+    with col1:
+        st.text(movies_poster['Movie title'][1])
+        if movies_poster['poster'][1]=='':
+            st.empty()
+        else:
+            st.image(movies_poster['poster'][1])
+    
+    with col2:
+        st.text(movies_poster['Movie title'][2])
+        if movies_poster['poster'][2]=='':
+            st.empty()
+        else:
+            st.image(movies_poster['poster'][2])
+    with col3:
+        st.text(movies_poster['Movie title'][3])
+        if movies_poster['poster'][3]=='':
+            st.empty()
+        else:
+            st.image(movies_poster['poster'][3])
+    with col4:
+        st.text(movies_poster['Movie title'][4])
+        if movies_poster['poster'][4]=='':
+            st.empty()
+        else:
+            st.image(movies_poster['poster'][4])
+    with col5:
+        st.text(movies_poster['Movie title'][5])
+        if movies_poster['poster'][5]=='':
+            st.empty()
+        else:
+            st.image(movies_poster['poster'][5])
+        
