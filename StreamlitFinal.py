@@ -18,29 +18,90 @@ add_selectbox = st.sidebar.selectbox(
     "Select the topic you want",
     ['Introduction', 'Directors & Genres', "Actors & Actresses", "Kids & Family", 'Recommendation System'])
 
+# Introduction
+image1 = Image.open('8_Pictures/intro_picture.jpg')
+image1 = image1.resize((1200, 800))
+
+# Directors & Genres
+image_director = Image.open('8_Pictures/director_picto.png')
+image_director = image_director.resize((150, 150))
+
+directors['Rotten Tomatoes rating'] = directors['Rotten Tomatoes rating']/10
+
+image_genre = Image.open('8_Pictures/genre_picto.png')
+image_genre = image_genre.resize((150, 150))
+
+# Actors & Actresses
+image_director = Image.open('8_Pictures/actors_picto.png')
+image_director = image_director.resize((150, 150))
+
+# Kids & Family
+image_kids = Image.open('8_Pictures/child_pictures.png')
+image_kids = image_kids.resize((600, 400))
+
+# Movie Recommendation 
+
+def movie_recommendation():
+
+    rec_sys['Year'] = rec_sys['startYear_x'].astype(str)
+    rec_sys['title_year'] = rec_sys['primaryTitle']+' '+rec_sys['Year']
+
+    options_reco = st.selectbox('Choose a movie:', rec_sys['title_year'].unique())
+
+    X=rec_sys[['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 'animation', 'biography',
+        'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi',
+        'game', 'history', 'horror', 'music', 'musical', 'mystery', 'news',
+        'reality', 'romance', 'sci', 'short', 'show', 'sport', 'talk',
+        'thriller', 'tv', 'war', 'western']]     
+
+    model = NearestNeighbors(n_neighbors=6)
+    model.fit(X)
+
+    array_1, array_2 = model.kneighbors(rec_sys.loc[rec_sys['title_year'] == options_reco, ['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 
+    'animation', 'biography','comedy', 'crime', 'documentary',
+    'drama', 'family', 'fantasy', 'fi','game', 'history', 'horror', 'music', 'musical', 'mystery', 'news',
+    'reality', 'romance', 'sci', 'short', 'show', 'sport', 'talk','thriller', 'tv', 'war', 'western']])
+
+    index_array = array_2
+    index_list = index_array.flatten().tolist() #to appear in vertical
+    index_df = pd.DataFrame(index_list).rename(columns={0:'Index_array'})
+
+    rec_sys.drop(['level_0'], axis=1, inplace=True)
+    rec_sys.reset_index(inplace=True)
+    Output_final=index_df.merge(rec_sys, how='left', left_on='Index_array', right_on='level_0')
+
+    hide_table_row_index = """
+                <style>
+                thead tr th:first-child {display:none}
+                tbody th {display:none}
+                </style>
+                """
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
+    Output_final = Output_final.rename(columns = {'averageRating':'IMDb rating', 'primaryTitle':'Movie title',
+                                                    'genres_x':'Genres'})
+    return Output_final
+
+
+
+
+
 if add_selectbox == 'Introduction':
 
-    image1 = Image.open('/../8_Pictures/intro_picture.jpg')
-    #image1 = image1.resize((1200, 800))
+    # image1 = Image.open('/../8_Pictures/intro_picture.jpg')
+    
     st.image(image1)
 
 
 elif add_selectbox == 'Directors & Genres':
 
-
     # Created the interval year slider 
     date_range = st.slider('Choose the year interval:', 1900, 2022, value = (1990, 2000))
 
-    #image_director = Image.open('director_picto.png')
-    #image_director = image_director.resize((150, 150))
-    #st.image(image_director)
-
+    st.image(image_director)
 
     # DIRECTORS : Question about the best movies per director 
 
     st.subheader('What are the best movies of your favourite director?')
-
-    directors['Rotten Tomatoes rating'] = directors['Rotten Tomatoes rating']/10
 
     options_dir = st.selectbox('Choose the director:', directors['Director name'].unique())
                                     
@@ -59,9 +120,7 @@ elif add_selectbox == 'Directors & Genres':
 
     # GENRE: Question about the genre 
 
-    #image_genre = Image.open('genre_picto.png')
-    #image_genre = image_genre.resize((150, 150))
-    #st.image(image_genre)
+    st.image(image_genre)
 
     st.subheader('What are the top 5 movies per genre and best reviews?')
 
@@ -83,13 +142,10 @@ elif add_selectbox == 'Directors & Genres':
 elif add_selectbox == "Actors & Actresses":
 
 
-    #image_director = Image.open('actors_picto.png')
-    #image_director = image_director.resize((150, 150))
-    # st.image(image_director, width = 150)
-    #st.image(image_director)
+    st.image(image_director)
 
+    # ACTORS: Question about the actors 
 
-        # ACTORS: Question about the actors 
     st.subheader('What are the best Actors / Actresses?')
 
     actor['category'] = actor['category'].str.title()
@@ -113,7 +169,6 @@ elif add_selectbox == "Kids & Family":
 
     date_range = st.slider('Choose the year interval:', 1900, 2022, value = (1990, 2000))
 
-
     # KIDS: Question about the best movies for kids 
 
     st.subheader('What are the best movies for kids?')
@@ -136,49 +191,11 @@ elif add_selectbox == "Kids & Family":
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
     st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
-    #image_kids = Image.open('child_pictures.png')
-    #image_kids = image_kids.resize((600, 400))
-    # st.image(image_kids, width = 150)
-    #st.image(image_kids)
+    st.image(image_kids)
 
 else:
     st.subheader('What is your favourite movie?')
-    
-    rec_sys['Year'] = rec_sys['startYear_x'].astype(str)
-    rec_sys['title_year'] = rec_sys['primaryTitle']+' '+rec_sys['Year']
-    
-    options_reco = st.selectbox('Choose a movie:', rec_sys['title_year'].unique())
-    
-    X=rec_sys[['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 'animation', 'biography',
-       'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi',
-       'game', 'history', 'horror', 'music', 'musical', 'mystery', 'news',
-       'reality', 'romance', 'sci', 'short', 'show', 'sport', 'talk',
-       'thriller', 'tv', 'war', 'western']]     
 
-    model = NearestNeighbors(n_neighbors=6)
-    model.fit(X)
-    
-    array_1, array_2 = model.kneighbors(rec_sys.loc[rec_sys['title_year'] == options_reco, ['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure', 
-    'animation', 'biography','comedy', 'crime', 'documentary',
-    'drama', 'family', 'fantasy', 'fi','game', 'history', 'horror', 'music', 'musical', 'mystery', 'news',
-    'reality', 'romance', 'sci', 'short', 'show', 'sport', 'talk','thriller', 'tv', 'war', 'western']])
-    
-    index_array = array_2
-    index_list = index_array.flatten().tolist() #to appear in vertical
-    index_df = pd.DataFrame(index_list).rename(columns={0:'Index_array'})
-    
-    rec_sys.drop(['level_0'], axis=1, inplace=True)
-    rec_sys.reset_index(inplace=True)
-    Output_final=index_df.merge(rec_sys, how='left', left_on='Index_array', right_on='level_0')
-    
-    hide_table_row_index = """
-                <style>
-                thead tr th:first-child {display:none}
-                tbody th {display:none}
-                </style>
-                """
-    st.markdown(hide_table_row_index, unsafe_allow_html=True)
-    Output_final = Output_final.rename(columns = {'averageRating':'IMDb rating', 'primaryTitle':'Movie title',
-                                                  'genres_x':'Genres'})
+    Output_final = movie_recommendation()
 
     st.table(Output_final[['Movie title', 'Genres', 'IMDb rating']].iloc[1:6].style.format({'IMDb rating': '{:.1f}'}))
