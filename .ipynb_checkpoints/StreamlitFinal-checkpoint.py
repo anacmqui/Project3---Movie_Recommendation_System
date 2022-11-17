@@ -24,25 +24,25 @@ add_selectbox = st.sidebar.selectbox(
     ['Introduction', 'Directors & Genres', "Actors & Actresses", "Kids & Family", 'Recommendation System'])
 
 # Introduction
-#image1 = Image.open('8_Pictures/intro_picture.jpg')
-#image1 = image1.resize((1200, 800))
+image1 = Image.open('8_Pictures/intro_picture.jpg')
+image1 = image1.resize((1200, 800))
 
 # Directors & Genres
-#image_director = Image.open('8_Pictures/director_picto.png')
-#image_director = image_director.resize((150, 150))
+image_director = Image.open('8_Pictures/director_picto.png')
+image_director = image_director.resize((150, 150))
 
 directors['Rotten Tomatoes rating'] = directors['Rotten Tomatoes rating']/10
 
-#image_genre = Image.open('8_Pictures/genre_picto.png')
-#image_genre = image_genre.resize((150, 150))
+image_genre = Image.open('8_Pictures/genre_picto.png')
+image_genre = image_genre.resize((150, 150))
 
 # Actors & Actresses
-#image_director = Image.open('8_Pictures/actors_picto.png')
-#image_director = image_director.resize((150, 150))
+image_director = Image.open('8_Pictures/actors_picto.png')
+image_director = image_director.resize((150, 150))
 
 # Kids & Family
-#image_kids = Image.open('8_Pictures/child_pictures.png')
-#image_kids = image_kids.resize((600, 400))
+image_kids = Image.open('8_Pictures/child_pictures.png')
+image_kids = image_kids.resize((600, 400))
 
 # Movie Recommendation 
 
