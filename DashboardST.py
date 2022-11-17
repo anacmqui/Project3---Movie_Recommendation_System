@@ -19,9 +19,9 @@ mov_poster = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project
 
 st.set_page_config(layout="wide")
 
-add_selectbox = st.sidebar.selectbox(
-    "Select the topic you want",
-    ['Dashboard', 'Recommendation System'])
+#add_selectbox = st.sidebar.selectbox(
+ #   "Select the topic you want",
+  #  ['Dashboard', 'Recommendation System'])
 
 # Introduction
 #image1 = Image.open('8_Pictures/intro_picture.jpg')
@@ -41,8 +41,10 @@ image_actor = Image.open('8_Pictures/actors_picto.png')
 image_actor = image_actor.resize((150, 150))
 
 # Kids & Family
-image_kids = Image.open('8_Pictures/child_pictures.png')
-image_kids = image_kids.resize((600, 400))
+image_kidspicto = Image.open('8_Pictures/forkid_picto.png')
+image_kidspicto = image_kidspicto.resize((150, 150))
+#image_kids = Image.open('8_Pictures/child_pictures.png')
+#image_kids = image_kids.resize((600, 400))
 
 # Movie Recommendation 
 
@@ -91,76 +93,43 @@ def fetch_poster(movie_id):
       full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
       return full_path
 
+
 # STREAMLIT CODE
+    
+st.markdown("<h1 style='text-align: center; color: black;'>Movie Theather Dashboard</h1>", unsafe_allow_html=True)
 
+st.markdown("<h2 style='text-align: left; color: black;'>Find the best movies for your audience</h2>", unsafe_allow_html=True)
 
-if add_selectbox == 'Dashboard':
+#if add_selectbox == 'Dashboard':
 
     # image1 = Image.open('/../8_Pictures/intro_picture.jpg')
     
     #st.image(image1)
 
     # Created the interval year slider 
+
+col1, col2, col3 = st.columns(3)    
+with col1:
+    st.empty()
+with col2:
     date_range = st.slider('Choose the year interval:', 1900, 2022, value = (1990, 2000))
+with col3:
+    st.empty()
+
     
-    col1, col2 = st.columns(2)
-    with col1:
-            st.image(image_director)
+col1, col2 = st.columns(2)
+with col1:
+        st.image(image_director)
+        #st.markdown(<p style='text-align: center; color: grey;'>"+img_to_html('8_Pictures/director_picto.png')+"</p>", unsafe_allow_html=True)
+# DIRECTORS : Question about the best movies per director 
 
-    # DIRECTORS : Question about the best movies per director 
+        st.subheader('What are the best movies of your favourite director?')
 
-            st.subheader('What are the best movies of your favourite director?')
+        options_dir = st.selectbox('Choose the director:', directors['Director name'].unique())
 
-            options_dir = st.selectbox('Choose the director:', directors['Director name'].unique())
-                                    
-            df_dir = directors[(directors['Director name']==options_dir) & (directors['Year'] >= date_range[0]) & (directors['Year'] <= date_range[1])]
+        df_dir = directors[(directors['Director name']==options_dir) & (directors['Year'] >= date_range[0]) & (directors['Year'] <= date_range[1])]
 
-    #st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
-
-            hide_table_row_index = """
-                        <style>
-                        thead tr th:first-child {display:none}
-                        tbody th {display:none}
-                        </style>
-                        """
-            st.markdown(hide_table_row_index, unsafe_allow_html=True)
-            st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
-
-    # GENRE: Question about the genre 
-    with col2:
-            st.image(image_genre)
-
-            st.subheader('What are the top 5 movies per genre and best reviews?')
-
-            options_genre = st.selectbox('Choose the genre you prefer:', genre['Genre'].unique())
-
-            df_genre = genre[(genre['Genre']==options_genre) & (genre['Year'] >= date_range[0]) & (genre['Year'] <= date_range[1])]
-
-            hide_table_row_index = """
-                    <style>
-                    thead tr th:first-child {display:none}
-                    tbody th {display:none}
-                    </style>
-                    """
-            st.markdown(hide_table_row_index, unsafe_allow_html=True)
-
-            st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating', 'Genre']].sort_values(by=['IMDb rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
-
-            
-
-    # ACTORS: Question about the actors 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.image(image_actor)
-        st.subheader('What are the best Actors / Actresses?')
-
-        actor['category'] = actor['category'].str.title()
-
-        options_actors = st.selectbox('Choose the Actor / Actress:', actor['category'].unique())
-
-        df_actor = actor[(actor['category']==options_actors)].head(10)
-
-        st.table(df_actor[['Staff name','IMDb rating', 'Nb movies', 'Ranking']].sort_values(by=['Ranking'], ascending=False).style.format({'IMDb rating': '{:.1f}', 'Ranking': '{:.1f}'}))
+#st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
 
         hide_table_row_index = """
                     <style>
@@ -169,44 +138,93 @@ if add_selectbox == 'Dashboard':
                     </style>
                     """
         st.markdown(hide_table_row_index, unsafe_allow_html=True)
+        st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
-    #date_range = st.slider('Choose the year interval:', 1900, 2022, value = (1990, 2000))
+# GENRE: Question about the genre 
+with col2:
+        st.image(image_genre)
 
-    # KIDS: Question about the best movies for kids 
-    with col2:
-        st.subheader('What are the best movies for kids?')
+        st.subheader('What are the best movies of your favourite genre?')
 
-    #st.subheader('*Where are the orders going to?*')
+        options_genre = st.selectbox('Choose the genre you prefer:', genre['Genre'].unique())
 
-        options_kids = st.selectbox('Choose the studio:', kids['Studio'].unique())
-                                
-        df_mov = kids[(kids['Studio']==options_kids) & (kids['Year'] >= date_range[0]) & (kids['Year'] <= date_range[1])]#[['movie_title','tomatometer_rating']]
-    #df_mov.round({'IMDb rating': 2, 'Rotten Tomatoes rating': 2})
-    #df_mov.round(2)
-    #st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by='Year', ascending=False))
+        df_genre = genre[(genre['Genre']==options_genre) & (genre['Year'] >= date_range[0]) & (genre['Year'] <= date_range[1])]
 
         hide_table_row_index = """
-                    <style>
-                    thead tr th:first-child {display:none}
-                    tbody th {display:none}
-                    </style>
-                    """
+                <style>
+                thead tr th:first-child {display:none}
+                tbody th {display:none}
+                </style>
+                """
         st.markdown(hide_table_row_index, unsafe_allow_html=True)
-        st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
-        st.image(image_kids)
+        st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating', 'Genre']].sort_values(by=['IMDb rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
-else:
-    st.subheader('What is your favourite movie?')
+
+
+# ACTORS: Question about the actors 
+col1, col2 = st.columns(2)
+with col1:
+    st.image(image_actor)
+    st.subheader('Who are the most popular Actors / Actresses?')
+
+    actor['category'] = actor['category'].str.title()
+
+    options_actors = st.selectbox('Choose the Actor / Actress:', actor['category'].unique())
+
+    df_actor = actor[(actor['category']==options_actors)].head(5)
+
+    st.table(df_actor[['Staff name','IMDb rating', 'Nb movies', 'Ranking']].sort_values(by=['Ranking'], ascending=False).style.format({'IMDb rating': '{:.1f}', 'Ranking': '{:.1f}'}))
+
+    hide_table_row_index = """
+                <style>
+                thead tr th:first-child {display:none}
+                tbody th {display:none}
+                </style>
+                """
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
+
+#date_range = st.slider('Choose the year interval:', 1900, 2022, value = (1990, 2000))
+
+# KIDS: Question about the best movies for kids 
+with col2:
+    st.image(image_kidspicto)
+    st.subheader('What are the best movies for kids?')
+
+#st.subheader('*Where are the orders going to?*')
+
+    options_kids = st.selectbox('Choose the studio:', kids['Studio'].unique())
+
+    df_mov = kids[(kids['Studio']==options_kids) & (kids['Year'] >= date_range[0]) & (kids['Year'] <= date_range[1])]#[['movie_title','tomatometer_rating']]
+#df_mov.round({'IMDb rating': 2, 'Rotten Tomatoes rating': 2})
+#df_mov.round(2)
+#st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by='Year', ascending=False))
+
+    st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
+    
+    hide_table_row_index = """
+                <style>
+                thead tr th:first-child {display:none}
+                tbody th {display:none}
+                </style>
+                """
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
+    #st.image(image_kids)
+    
+    
+st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: left; color: black;'>Movie Recommendation System</h2>", unsafe_allow_html=True)
+
+with st.expander("Try our Movie Recommendation System"):
 
     Output_final = movie_recommendation()
     movies_poster = pd.merge(Output_final, mov_poster, how='left', left_on='tconst', right_on='imdb_id')
     movies_poster['id'].fillna(0, inplace=True)
     movies_poster['poster'] = movies_poster['id'].apply(fetch_poster)
-    
-    #st.table(movies_poster[['Movie title', 'Genres', 'IMDb rating', 'poster']].iloc[1:6].style.format({'IMDb rating': '{:.1f}'}))
+
+#st.table(movies_poster[['Movie title', 'Genres', 'IMDb rating', 'poster']].iloc[1:6].style.format({'IMDb rating': '{:.1f}'}))
     if st.button('Show Recommendation'):
-        
+
         col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
             st.text(movies_poster['Movie title'][1])
@@ -214,7 +232,7 @@ else:
                 st.empty()
             else:
                 st.image(movies_poster['poster'][1])
-    
+
         with col2:
             st.text(movies_poster['Movie title'][2])
             if movies_poster['poster'][2]=='':
@@ -238,4 +256,13 @@ else:
             if movies_poster['poster'][5]=='':
                 st.empty()
             else:
-                st.ima
+                st.image(movies_poster['poster'][5])
+                    
+
+col1, col2 = st.columns(2)
+
+with col1:
+    if st.button('Enjoy your movie'):
+        st.balloons()
+with col2:
+    st.empty()
