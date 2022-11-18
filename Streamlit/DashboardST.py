@@ -7,7 +7,7 @@ from datetime import time
 from PIL import Image
 import sklearn
 from sklearn.neighbors import NearestNeighbors
-
+import streamlit_book as stb
 
 # Import the datasets 
 kids = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/kids_imdb_rt1.csv')
@@ -47,6 +47,9 @@ image_kidspicto = image_kidspicto.resize((150, 150))
 #image_kids = image_kids.resize((600, 400))
 
 # Movie Recommendation 
+
+kids = kids[kids['Studio'].notna()]
+
 
 def movie_recommendation():
 
@@ -95,7 +98,8 @@ def fetch_poster(movie_id):
 
 
 # STREAMLIT CODE
-    
+
+
 st.markdown("<h1 style='text-align: center; color: black;'>Movie Theather Dashboard</h1>", unsafe_allow_html=True)
 
 st.markdown("<h2 style='text-align: left; color: black;'>Find the best movies for your audience</h2>", unsafe_allow_html=True)
@@ -122,11 +126,11 @@ with col1:
         st.image(image_director)
         #st.markdown(<p style='text-align: center; color: grey;'>"+img_to_html('8_Pictures/director_picto.png')+"</p>", unsafe_allow_html=True)
 # DIRECTORS : Question about the best movies per director 
-
+        
         st.subheader('What are the best movies of your favourite director?')
 
-        options_dir = st.selectbox('Choose the director:', directors['Director name'].unique())
-
+        options_dir = st.selectbox('Choose the director:', directors['Director name'].unique(), 1)
+        
         df_dir = directors[(directors['Director name']==options_dir) & (directors['Year'] >= date_range[0]) & (directors['Year'] <= date_range[1])]
 
 #st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))

@@ -48,6 +48,9 @@ image_kidspicto = image_kidspicto.resize((150, 150))
 
 # Movie Recommendation 
 
+kids = kids[kids['Studio'].notna()]
+
+
 def movie_recommendation():
 
     rec_sys['Year'] = rec_sys['startYear_x'].astype(str)
@@ -95,7 +98,7 @@ def fetch_poster(movie_id):
 
 
 # STREAMLIT CODE
-    
+
 st.markdown("<h1 style='text-align: center; color: black;'>Movie Theather Dashboard</h1>", unsafe_allow_html=True)
 
 st.markdown("<h2 style='text-align: left; color: black;'>Find the best movies for your audience</h2>", unsafe_allow_html=True)
@@ -122,11 +125,15 @@ with col1:
         st.image(image_director)
         #st.markdown(<p style='text-align: center; color: grey;'>"+img_to_html('8_Pictures/director_picto.png')+"</p>", unsafe_allow_html=True)
 # DIRECTORS : Question about the best movies per director 
-
+        
         st.subheader('What are the best movies of your favourite director?')
-
-        options_dir = st.selectbox('Choose the director:', directors['Director name'].unique())
-
+        #default_ix = directors.index(30)
+        options_dir = st.selectbox('Choose the director:', directors['Director name'].unique(), 1)
+        
+        #values = ['<select>',3, 5, 10, 15, 20, 30]
+        
+        #window_ANTICOR = st.selectbox('Window ANTICOR', values, index=default_ix)
+        
         df_dir = directors[(directors['Director name']==options_dir) & (directors['Year'] >= date_range[0]) & (directors['Year'] <= date_range[1])]
 
 #st.table(df_dir[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False))
