@@ -17,7 +17,6 @@ actor = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/
 rec_sys = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/movies_reco_system_5.csv')
 mov_poster = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/tmdb_10.csv')
 
-st.set_page_config(layout="wide")
 
 #add_selectbox = st.sidebar.selectbox(
  #   "Select the topic you want",
@@ -49,7 +48,6 @@ image_kidspicto = image_kidspicto.resize((150, 150))
 # Movie Recommendation 
 
 kids = kids[kids['Studio'].notna()]
-
 
 
 # STREAMLIT CODE
@@ -117,7 +115,7 @@ with col2:
                 """
         st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
-        st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating', 'Genre']].sort_values(by=['IMDb rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
+        st.table(df_genre[['Movie title','Year','IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
 
 
 
@@ -159,7 +157,7 @@ with col2:
 #df_mov.round(2)
 #st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by='Year', ascending=False))
 
-    st.table(df_mov[['Movie Title', 'Year', 'Studio', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
+    st.table(df_mov[['Movie Title', 'Year', 'IMDb rating', 'Rotten Tomatoes rating']].sort_values(by=['IMDb rating','Year', 'Rotten Tomatoes rating'], ascending=False).head(5).style.format({'IMDb rating': '{:.1f}', 'Rotten Tomatoes rating': '{:.1f}'}))
     
     hide_table_row_index = """
                 <style>

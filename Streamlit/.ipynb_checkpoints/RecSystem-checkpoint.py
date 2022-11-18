@@ -10,37 +10,37 @@ from sklearn.neighbors import NearestNeighbors
 import streamlit_book as stb
 
 # Import the datasets 
-kids = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/kids_imdb_rt1.csv')
-directors = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/directors_rt_imdb1.csv')
-genre = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/GenreQuestion.csv')
-actor = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/bestactors.csv')
-rec_sys = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/movies_reco_system_5.csv')
+#kids = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/kids_imdb_rt1.csv')
+#directors = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/directors_rt_imdb1.csv')
+#genre = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/GenreQuestion.csv')
+#actor = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/6_TablesForStreamlit/bestactors.csv')
+rec_sys1 = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/movies_reco_system_5.csv')
 mov_poster = pd.read_csv('https://raw.githubusercontent.com/Sebastiao199/Project3MRS/main/4_LinkingTables/tmdb_10.csv')
 
-st.set_page_config(layout="wide")
+rec_sys1['Year'] = rec_sys1['startYear_x'].astype(str)
+rec_sys1['title_year'] = rec_sys1['primaryTitle']+' '+rec_sys1['Year']
+X=rec_sys1[['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure' ,'animation' ,'biography', 'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi', 'history' ,'horror' ,'music', 'musical', 'mystery' ,'news' ,'reality', 'romance' ,'sci' ,'sport' ,'thriller','tv', 'war' ,'western']]          
+
+modelNN = NearestNeighbors(n_neighbors=6)
+modelNN.fit(X)
+index_df=pd.DataFrame()
+
+def movie_recommendation(model, rec_sys1=rec_sys1, index_df=index_df):
 
 
-def movie_recommendation():
+    options_reco = st.selectbox('Choose a movie:', rec_sys1['title_year'].unique())
 
-    rec_sys['Year'] = rec_sys['startYear_x'].astype(str)
-    rec_sys['title_year'] = rec_sys['primaryTitle']+' '+rec_sys['Year']
+    
+    array_1, array_2 = model.kneighbors(rec_sys1.loc[rec_sys1['title_year'] == options_reco, ['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure' ,'animation' ,'biography', 'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi', 'history' ,'horror' ,'music', 'musical', 'mystery' ,'news' ,'reality', 'romance' ,'sci' ,'sport' ,'thriller','tv', 'war' ,'western']])
 
-    options_reco = st.selectbox('Choose a movie:', rec_sys['title_year'].unique())
-
-    X=rec_sys[['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure' ,'animation' ,'biography', 'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi', 'history' ,'horror' ,'music', 'musical', 'mystery' ,'news' ,'reality', 'romance' ,'sci' ,'sport' ,'thriller','tv', 'war' ,'western']]          
-
-    model = NearestNeighbors(n_neighbors=6)
-    model.fit(X)
-
-    array_1, array_2 = model.kneighbors(rec_sys.loc[rec_sys['title_year'] == options_reco, ['startYear_st', 'runtimeMinutes_st', 'averageRating_st', 'numVotes_st', 'action', 'adult', 'adventure' ,'animation' ,'biography', 'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'fi', 'history' ,'horror' ,'music', 'musical', 'mystery' ,'news' ,'reality', 'romance' ,'sci' ,'sport' ,'thriller','tv', 'war' ,'western']])
-
-    index_array = array_2
-    index_list = index_array.flatten().tolist() #to appear in vertical
-    index_df = pd.DataFrame(index_list).rename(columns={0:'Index_array'})
-
-    rec_sys.drop(['level_0'], axis=1, inplace=True)
-    rec_sys.reset_index(inplace=True)
-    Output_final=index_df.merge(rec_sys, how='left', left_on='Index_array', right_on='level_0')
+    #index_array = array_2
+    #index_list = array_2.flatten().tolist() #to appear in vertical
+    #index_df = pd.DataFrame(index_list).rename(columns={0:'Index_array'})
+    index_df['Index_array']=array_2.flatten().tolist()
+    
+    rec_sys1.drop(['level_0'], axis=1, inplace=True)
+    rec_sys1.reset_index(inplace=True)
+    Output_final=index_df.merge(rec_sys1, how='left', left_on='Index_array', right_on='level_0')
 
     hide_table_row_index = """
                 <style>
@@ -55,24 +55,24 @@ def movie_recommendation():
 
 
 def fetch_poster(movie_id):
+    import requests
     if movie_id==0:
-      return ''
+        return ''
     else:
-      url = "https://api.themoviedb.org/3/movie/{}?api_key=39976f73499bf65190665011272a5caf".format(movie_id)
-      data = requests.get(url)
-      data = data.json()
-      poster_path = data['poster_path']
-      full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
-      return full_path
+        url = "https://api.themoviedb.org/3/movie/{}?api_key=39976f73499bf65190665011272a5caf".format(movie_id)
+        data = requests.get(url)
+        data = data.json()
+        poster_path = data['poster_path']
+        full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
+        return full_path
 
 
 # STREAMLIT CODE
-
-
+st.markdown("<h2 style='text-align: left; color: black;'>Movie Recommendation System</h2>", unsafe_allow_html=True)
 
 with st.expander("Try our Movie Recommendation System"):
 
-    Output_final = movie_recommendation()
+    Output_final = movie_recommendation(modelNN)
     movies_poster = pd.merge(Output_final, mov_poster, how='left', left_on='tconst', right_on='imdb_id')
     movies_poster['id'].fillna(0, inplace=True)
     movies_poster['poster'] = movies_poster['id'].apply(fetch_poster)
