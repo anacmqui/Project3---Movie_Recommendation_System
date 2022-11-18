@@ -1,4 +1,4 @@
-# GitHub Documentation - Movie recommandation - Data Breakers
+# GitHub Documentation - Movie recommendation - Data Breakers
 
 
 # Context 
